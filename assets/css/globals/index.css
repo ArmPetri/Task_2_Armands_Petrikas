@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../../assets/font/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../../assets/font/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../../assets/font/Oswald/static/Oswald-Medium.ttf") format("truetype");
+}
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat-Regular", sans-serif;
+  background-color: #FFFFFF;
+  color: #2F4858;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.css.map */

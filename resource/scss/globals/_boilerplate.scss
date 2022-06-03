@@ -1,0 +1,26 @@
+@use '../util';
+@use './colors';
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: util.$Montserrat;
+  background-color: colors.$white;
+  color: colors.$dark-blue;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
