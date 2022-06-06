@@ -247,11 +247,10 @@ main .hero-image {
   line-height: 22px;
   text-align: center;
   color: #2F4858;
+  margin-bottom: 1px;
 }
 .description p {
   margin-right: -19px;
-  margin-bottom: -24px;
-  padding-bottom: 45px;
 }
 
 .people {
