@@ -5,7 +5,7 @@
   height: 92.51px;
   display: flex;
   flex-direction: row;
-  padding: 0px 62px;
+  padding: 0px 45px;
   position: relative;
   z-index: 3;
   margin: 0;
@@ -22,6 +22,8 @@
   }
 
   .nav {
+
+
     .nav-link {
       font-family: fonts.$MontserratM;
       font-style: normal;
@@ -44,6 +46,8 @@
     
     .language {
       appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
       border: none;
       font-family: fonts.$MontserratM;
       font-style: normal;
@@ -51,9 +55,7 @@
       font-size: 18px;
       line-height: 22px;
       color: colors.$navbar;
-      padding-bottom: 5.5px;
-      margin-right: 2px;
-      margin-left: 30px;
+      margin-left:24px;
     
       &:focus {
         border: none;
@@ -114,7 +116,7 @@
     height: 45px;
     margin-top: 33px;
     padding-bottom: 3px;
-    margin-left: 242px;
+    margin-left: 258px;
   }
   .mobile-nav {
 		display: none;
@@ -157,6 +159,7 @@
     height: 58.09px;
     justify-content: space-between;
     text-align: center;
+    padding: 0 20px;
 
     .logo {
       position: static;

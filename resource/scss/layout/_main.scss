@@ -7,27 +7,27 @@ main {
 
   .hero-wave {
     position: absolute;
-    margin-top: -0.1rem;
+    margin-top: -0.4rem;
     left: 0;
     width: 100%;
     z-index: 2;
   }
 
   .hero {
-    background-image: url("../img/Sparkle Video 1.png");
     width: 100%;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    position: relative;
-    top: -3rem;
+    height: auto;
     z-index: 1;
+    position: relative;
+    margin-top: -1.2rem;
 
     .play-button {
-      position: absolute;
-      top: 42.3%;
-      left:45.4%;
       transition: all 0.1s ease-in-out;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50.5%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 
       &:hover {
       opacity: 0.9;
@@ -35,10 +35,15 @@ main {
       }
     }
   }
+
+  .hero-image {
+    width: 100%;;
+    height: auto
+  }
 }
 
 .description {
-  padding: 102px 356px 150px;
+  padding: 132px 355px 150px;
   font-family: fonts.$Montserrat;
   font-style: normal;
   font-weight: 400;
@@ -46,6 +51,12 @@ main {
   line-height: 22px;
   text-align: center;
   color: colors.$dark-blue;
+
+  p {
+    margin-right: -19px;
+    margin-bottom: -24px;
+    padding-bottom: 45px;
+  }
 }
 
 .people {
@@ -345,7 +356,7 @@ main {
   padding: 0 168px 63px;
   z-index: 2;
   height: 481.32px;
-  background-image: url(../../../assets/img/Subtract.png);
+  background-image: url(../img/Subtract.png);
   
   h3 {
     font-family: fonts.$Oswald;
@@ -449,7 +460,15 @@ main {
 // Media Queries 
 @media (min-width: 1201px) {
     .hero {
-  height: 722px; 
+    height: 722px; 
+    top: -1rem;
+    position: relative;
+
+    .play-button {
+      min-width: 86px;
+       min-height: 83px;
+     }
+
   }  
   .mobile-nav {
     display: none;
@@ -458,8 +477,17 @@ main {
 
 @media (max-width: 1200px) {
   .hero {
-    height: 406px;
-    background-size: contain;
+    max-height: 722px; 
+
+    width: 100%;
+    top: 1rem;
+    background-size: cover;
+
+    .play-button {
+      max-width: 86px;
+       max-height: 83px;
+     }
+    
     }  
     
   .description {
@@ -517,12 +545,29 @@ main {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    position: unset;
+    background-size: contain;
+    max-width: 100%;
+
+    .play-button {
+      min-width: 50px;
+      min-height: 48.26px;
+     }
+  }
+
   .hero-wave {
     position: absolute;
     margin-top: -0.1rem;
     left: 0;
     width: 100%;
+    height: auto;
     z-index: 2;
+  }
+
+  .description {
+    padding: 80px 20px;
+    font-size: 12px;
   }
 
   .call-to-action {
@@ -593,11 +638,16 @@ main {
         }
       }
 
+      .ripped-top {
+        height: 24px;
+      }
+
       .ripped-bottom {
         position: absolute;
         left: 0;
         z-index: 1;
-        height: 60px;
+        height: 50px;
+        bottom: 0.1px;
       }
   }
 

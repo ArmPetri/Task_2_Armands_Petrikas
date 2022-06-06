@@ -57,7 +57,7 @@ a:active {
   height: 92.51px;
   display: flex;
   flex-direction: row;
-  padding: 0px 62px;
+  padding: 0px 45px;
   position: relative;
   z-index: 3;
   margin: 0;
@@ -92,6 +92,8 @@ a:active {
 }
 .header .nav .language {
   appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   border: none;
   font-family: "Montserrat-Medium", sans-serif;
   font-style: normal;
@@ -99,9 +101,7 @@ a:active {
   font-size: 18px;
   line-height: 22px;
   color: #060606;
-  padding-bottom: 5.5px;
-  margin-right: 2px;
-  margin-left: 30px;
+  margin-left: 24px;
 }
 .header .nav .language:focus {
   border: none;
@@ -151,7 +151,7 @@ a:active {
     height: 45px;
     margin-top: 33px;
     padding-bottom: 3px;
-    margin-left: 242px;
+    margin-left: 258px;
   }
   .header .mobile-nav {
     display: none;
@@ -188,6 +188,7 @@ a:active {
     height: 58.09px;
     justify-content: space-between;
     text-align: center;
+    padding: 0 20px;
   }
   .header .logo {
     position: static;
@@ -207,34 +208,38 @@ main {
 }
 main .hero-wave {
   position: absolute;
-  margin-top: -0.1rem;
+  margin-top: -0.4rem;
   left: 0;
   width: 100%;
   z-index: 2;
 }
 main .hero {
-  background-image: url("../img/Sparkle Video 1.png");
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  top: -3rem;
+  height: auto;
   z-index: 1;
+  position: relative;
+  margin-top: -1.2rem;
 }
 main .hero .play-button {
-  position: absolute;
-  top: 42.3%;
-  left: 45.4%;
   transition: all 0.1s ease-in-out;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 main .hero .play-button:hover {
   opacity: 0.9;
   transition: all 0.1s ease-in-out;
 }
+main .hero-image {
+  width: 100%;
+  height: auto;
+}
 
 .description {
-  padding: 102px 356px 150px;
+  padding: 132px 355px 150px;
   font-family: "Montserrat-Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -242,6 +247,11 @@ main .hero .play-button:hover {
   line-height: 22px;
   text-align: center;
   color: #2F4858;
+}
+.description p {
+  margin-right: -19px;
+  margin-bottom: -24px;
+  padding-bottom: 45px;
 }
 
 .people {
@@ -513,7 +523,7 @@ main .hero .play-button:hover {
   padding: 0 168px 63px;
   z-index: 2;
   height: 481.32px;
-  background-image: url(../../../assets/img/Subtract.png);
+  background-image: url(../img/Subtract.png);
 }
 .supporters h3 {
   font-family: "Oswald", sans-serif;
@@ -612,6 +622,12 @@ main .hero .play-button:hover {
 @media (min-width: 1201px) {
   .hero {
     height: 722px;
+    top: -1rem;
+    position: relative;
+  }
+  .hero .play-button {
+    min-width: 86px;
+    min-height: 83px;
   }
 
   .mobile-nav {
@@ -620,8 +636,14 @@ main .hero .play-button:hover {
 }
 @media (max-width: 1200px) {
   .hero {
-    height: 406px;
-    background-size: contain;
+    max-height: 722px;
+    width: 100%;
+    top: 1rem;
+    background-size: cover;
+  }
+  .hero .play-button {
+    max-width: 86px;
+    max-height: 83px;
   }
 
   .description {
@@ -678,12 +700,28 @@ main .hero .play-button:hover {
   }
 }
 @media (max-width: 768px) {
+  .hero {
+    position: unset;
+    background-size: contain;
+    max-width: 100%;
+  }
+  .hero .play-button {
+    min-width: 50px;
+    min-height: 48.26px;
+  }
+
   .hero-wave {
     position: absolute;
     margin-top: -0.1rem;
     left: 0;
     width: 100%;
+    height: auto;
     z-index: 2;
+  }
+
+  .description {
+    padding: 80px 20px;
+    font-size: 12px;
   }
 
   .call-to-action {
@@ -742,11 +780,15 @@ main .hero .play-button:hover {
   .people .column:nth-of-type(4) img {
     margin-top: 1px;
   }
+  .people .ripped-top {
+    height: 24px;
+  }
   .people .ripped-bottom {
     position: absolute;
     left: 0;
     z-index: 1;
-    height: 60px;
+    height: 50px;
+    bottom: 0.1px;
   }
 
   .supporters {
