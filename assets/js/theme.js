@@ -1,5 +1,11 @@
 window.onload = function () {
 
+// logo   
+const logo = document.querySelector('#logo');
+logo.addEventListener('click',  () => {
+  document.location = 'index.html'
+})
+
 // // Burger menu 
 const menu_btn = document.querySelector('.hamburger');
 const mobile_menu = document.querySelector('.mobile-nav');
@@ -36,3 +42,4 @@ scrollUpButton.addEventListener("click", scrollToTop);
     })
   }
 }
+

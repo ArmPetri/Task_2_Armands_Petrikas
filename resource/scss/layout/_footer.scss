@@ -2,15 +2,31 @@
 @use '../util/fonts';
 
 footer {
+  // background-image: url(../../../assets/img/footer\ whole.png);
   position: relative;
   z-index: 1;
+  z-index: 0;
   background: colors.$dark-blue;
   color: colors.$white;
   padding-top: 70px 82px 20px 82px;
   display: flex;
-  margin-top: -2.5rem;
+  margin-top: -3.4rem;
+  // margin-top: -4rem;
   overflow: hidden;
   min-height: 382px;
+}
+
+.footer-ripped {
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  // margin-top: -5÷px;
+  margin-top: -10px;
+  top: -1px;
+  left: 0;
+  // border: 1px solid red;
+  transform: rotate(180deg);
+  background-color: #2F4858;
 }
 
 .footer-rows {

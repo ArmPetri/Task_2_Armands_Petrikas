@@ -1,0 +1,167 @@
+@use '../globals/colors';
+@use '../util/fonts';
+
+.idea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 112.5px 0 150px;
+
+  h1 {
+    margin-bottom: 60px;
+  }  
+
+  p {
+    width: 606px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.juris {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  .ripped-top {
+    z-index: 3;
+    transform: rotate(180deg);
+    width: 100%;
+    position: absolute;
+    top: -0.1px;
+    left: 0;
+  }
+  
+  .background {
+    z-index: -1;
+    width: 100%;
+    transform: scale(0.998);
+  }
+  
+  .ripped-bottom {
+    position: absolute;
+
+    z-index: 3;
+    width: 100%;
+    height: auto; 
+    bottom: -5px;
+  }
+
+  
+  .juris-text {
+    margin: auto;
+    position: absolute;
+    width: 818px;
+    color: colors.$white;
+    text-align: center;
+    line-height: 36px;
+  }
+}
+
+.ken {
+  position: relative;
+  padding: 150px 0 205px;
+  z-index: 10;
+  margin-bottom: -6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    line-height: 36px;
+  }
+
+  .Text2 {
+    line-height: 22px;
+    margin-top: 10px;
+  }
+
+  .Text1 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 30px;
+    font-style: italic;
+  }
+
+  .arrows {
+    display: flex;
+    margin-top: 30px;
+  }
+
+
+  .arrow-right {
+    margin-left: 46px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .juris-text {
+    bottom: 88px;
+  }
+}
+@media (max-width: 1200px) {
+  .juris-text {
+    bottom: 88px;
+  }
+}
+
+@media (max-width: 768px) {
+  .idea {
+
+    h1 {
+      font-size: 36px;
+    }
+
+    p {
+      width: auto;
+      font-size: 12px;
+      padding: 0 6.25%;
+    }
+  }
+
+  .juris {
+    padding: 0 6.25%;
+    height: 476px;
+    background-image: url(../../../assets/img/Juris\ \(1\)\ 1.png);
+    background-size: cover;
+    background-position: -400px;
+    display: flex;
+    align-items: flex-end;
+
+    .juris-text {
+      font-size: 18px;
+      width: auto;
+      padding: 0 6.25% 5.35%;
+      bottom: unset;
+    }
+
+    .background {
+      width: 921px;
+      height: 476px;
+    }
+  }
+
+  .ken {
+
+    .text-wrapper {
+      margin: 0 6.25%;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .Text2 {
+      font-size: 14px;
+     }
+
+    .Text1 {
+      font-size: 12px;
+     }    
+  }
+}

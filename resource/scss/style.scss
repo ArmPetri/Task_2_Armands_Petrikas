@@ -1,8 +1,39 @@
 @forward 'globals';
-@forward 'layout';
+// @forward 'layout';
 
 
 
+// 1. Configuration and helpers
+// @forward
+//   'abstracts/variables',
+//   'abstracts/functions',
+//   'abstracts/mixins';
 
+// 2. Vendors
+// @forward
+//   'vendors/normalize';
 
+// 3. Base stuff
+// @forward
+//   'base/base',
+//   'base/fonts',
+//   'base/typography',
+//   'base/helpers';
+
+// 4. Layout-related sections
+@forward
+  'layout';
+
+// 5. Components
+// @forward
+//   'components/button';
+
+// 6. Page-specific styles
+@forward 'pages/home';
+@forward 'pages/ideja';
+@forward 'pages/piesaki_sapni';
+
+// 7. Themes
+// @forward
+//   'themes/default';
 

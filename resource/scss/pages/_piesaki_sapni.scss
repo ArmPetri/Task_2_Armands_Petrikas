@@ -1,0 +1,328 @@
+@use '../globals/colors';
+@use '../util/fonts';
+
+.dream {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 112.5px 0 50px;
+
+  h1 {
+    margin-bottom: 60px;
+  }  
+
+  .Text1 {
+    line-height: 29px;
+    text-align: center;
+  }
+}
+
+.choose-dream {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  // padding-top: 90px;
+  padding-bottom: 150px;
+  margin: 0 35px;
+
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    width: 394px;
+    height: 594px;
+    margin-top: 40px;
+
+    p {
+      margin-bottom: 50px;
+    }
+
+    button {
+      font-family: fonts.$Montserrat;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      height: 50px;
+      width: 233px;
+      border: none;
+      // margin-top: -0.5rem;
+      border-radius: 25px;
+      background-color: colors.$orange;
+      color: colors.$white;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: colors.$hover;
+        transition: all 0.1s ease-in-out;
+      }
+
+      &:active {
+        background-color: colors.$orange;
+      }
+    }
+  }
+
+  div:nth-of-type(1) {
+    h2 {
+      margin-top: 30px;
+    }
+    button {
+      margin-top: 60px;
+    }
+  }
+
+  div:nth-of-type(2) {
+    img {
+      margin-bottom: 49px;
+    }
+    p {
+      margin-top: 30px;
+    }
+  }
+}
+
+.people-2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  .ripped-top {
+    position: absolute;
+    left: 0;
+    top: -0.1rem;
+    width: 100%;
+    z-index: 2;
+    transform: rotate(180deg);
+    height: 63px;
+  }
+
+
+  .ripped-bottom {
+    position: absolute;
+    left: 0;
+    bottom: -0.9rem;
+    width: 100%;
+    z-index: 1;
+    height:60px;
+  }
+
+  .column {
+    &:nth-of-type(1) {
+      flex: 19.5%;
+      z-index: 0;
+    }
+
+    &:nth-of-type(2) {
+      flex: 20.5%;
+      z-index: 1;
+    }
+
+    &:nth-of-type(3) {
+      flex: 21%;
+    }
+
+    &:nth-of-type(4) {
+      flex: 34%;
+    }
+  }
+
+  .one {
+    // margin-top: 1.3rem;
+    width: 120%;
+    transform: scale(1.05);
+    margin-top: 30px;
+    margin-left: 5px;
+    // height: 100%; 
+  }
+
+  .two {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+
+  .three {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .four {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .five {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .ripped-bottom {
+    bottom: 5.099999999999994rem;
+  }
+}
+
+ .contact .dream {
+  margin: 65px auto 196px;
+  z-index: 5;
+  padding-bottom: -1px;
+
+  .form {
+    margin-top: 0;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+}
+
+.footer {
+  z-index: 0;
+
+  .footer-ripped {
+    z-index: 0;
+  }
+}
+
+// Media Queries 
+@media (max-width: 1200px) {
+  .dream {
+
+    .Text1 {
+      padding: 0 6.25%;
+    }
+  }
+
+  .choose-dream {
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 6.25% 150px;
+    margin: 0;
+
+    div {
+      height: auto;
+      width: 100%;
+
+
+      p {
+        width: 100%;
+      }
+
+      &:first-of-type {
+        margin-bottom: 150px;
+
+        p {
+          margin-top: 30px;
+        }
+        
+        button {
+          margin: 0;
+        }
+      }
+
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .dream {
+    h1 {
+      font-size: 36px;
+    }
+
+    .Text1 {
+      font-size: 14px;
+    }
+  }
+
+  .choose-dream {
+    h2 {
+      font-size: 18px;
+    }
+
+    .Text2 {
+      font-size: 12px;
+    }
+  }
+
+  .people-2 {
+    width: 100%;
+    height: 90%;
+
+    .column {
+      &:nth-of-type(1) {
+          flex: 49%;
+          order: 3;
+
+          img {
+            margin-top: 0;
+          }
+        }
+      
+        &:nth-of-type(2) {
+          flex: 51%;
+          order: 4;
+
+          img {
+            margin-top: 0;
+          }
+        }
+      
+        &:nth-of-type(3) {
+          order: 1;
+          flex: 43.6%;
+
+          img {
+            margin-top: 0.5px;
+          }
+        }
+      
+        &:nth-of-type(4) {
+          order: 2;
+          flex: 56.4%;
+          // height: 154px;
+
+          img {
+            margin-top: 1px;
+          }
+        }
+      }
+
+      .ripped-top {
+        height: 24px;
+      }
+
+      .ripped-bottom {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        height: 50px;
+        bottom: 0.1px;
+      }
+
+    }
+
+    .contact .dream {
+      width: auto;
+      margin: 50px 6.25% 150px;
+  
+      .name-email {
+        flex-direction: column;
+        
+        input {
+          width: 100%;
+        }
+      }
+    } 
+
+}
