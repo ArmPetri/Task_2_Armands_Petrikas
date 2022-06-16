@@ -24,7 +24,6 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  // padding-top: 90px;
   padding-bottom: 150px;
   margin: 0 35px;
 
@@ -53,7 +52,6 @@
       height: 50px;
       width: 233px;
       border: none;
-      // margin-top: -0.5rem;
       border-radius: 25px;
       background-color: colors.$orange;
       color: colors.$white;
@@ -93,7 +91,15 @@
   width: 100%;
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+
+  .dream-image-wrapper {
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .ripped-top {
     position: absolute;
@@ -111,7 +117,7 @@
     left: 0;
     bottom: -0.9rem;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     height:60px;
   }
 
@@ -123,7 +129,7 @@
 
     &:nth-of-type(2) {
       flex: 20.5%;
-      z-index: 1;
+      z-index: 0;
     }
 
     &:nth-of-type(3) {
@@ -136,12 +142,10 @@
   }
 
   .one {
-    // margin-top: 1.3rem;
     width: 120%;
     transform: scale(1.05);
     margin-top: 30px;
     margin-left: 5px;
-    // height: 100%; 
   }
 
   .two {
@@ -194,6 +198,91 @@
 }
 
 // Media Queries 
+@media (min-width: 1201px) {
+  .people-2 {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    .ripped-top-mobile,
+    .ripped-bottom-mobile {
+      display: none;
+    }
+  
+    .ripped-top {
+      position: absolute;
+      left: 0;
+      top: -0.1rem;
+      width: 100%;
+      z-index: 2;
+      transform: rotate(180deg);
+      height: 63px;
+    }
+  
+    .ripped-bottom {
+      position: absolute;
+      left: 0;
+      bottom: -0.9rem;
+      width: 100%;
+      z-index: 1;
+      height:60px;
+    }
+  
+    .column {
+      &:nth-of-type(1) {
+        flex: 19.5%;
+        z-index: 0;
+      }
+  
+      &:nth-of-type(2) {
+        flex: 20.5%;
+        z-index: 1;
+      }
+  
+      &:nth-of-type(3) {
+        flex: 21%;
+      }
+  
+      &:nth-of-type(4) {
+        flex: 34%;
+      }
+    }
+  
+    .one {
+      width: 120%;
+      transform: scale(1.05);
+      margin-top: 30px;
+      margin-left: 5px;
+    }
+  
+    .two {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .three {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .four {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  
+    .five {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  
+    .ripped-bottom {
+      bottom: 5.099999999999994rem;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .dream {
 
@@ -228,7 +317,91 @@
           margin: 0;
         }
       }
+    }
+  }
 
+  .people-2 {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    .ripped-top-mobile,
+    .ripped-bottom-mobile {
+      display: none;
+    }
+    
+    .ripped-top {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -0.1rem;
+      width: 100%;
+      z-index: 2;
+      transform: rotate(180deg);
+      height: 63px;
+    }
+  
+    .ripped-bottom {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -0.9rem;
+      width: 100%;
+      z-index: 1;
+      height:60px;
+    }
+  
+    .column {
+      &:nth-of-type(1) {
+        flex: 19.5%;
+        z-index: 0;
+      }
+  
+      &:nth-of-type(2) {
+        flex: 20.5%;
+        z-index: 1;
+      }
+  
+      &:nth-of-type(3) {
+        flex: 21%;
+      }
+  
+      &:nth-of-type(4) {
+        flex: 34%;
+      }
+    }
+  
+    .one {
+      width: 120%;
+      transform: scale(1.05);
+      margin-top: 30px;
+      margin-left: 5px;
+    }
+  
+    .two {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .three {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .four {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  
+    .five {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  
+    .ripped-bottom {
+      bottom: 5.099999999999994rem;
     }
   }
 
@@ -259,63 +432,100 @@
     width: 100%;
     height: 90%;
 
+    .ripped-top, .ripped-bottom {
+      display: none;
+    }
+
+    .dream-image-wrapper {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
     .column {
       &:nth-of-type(1) {
-          flex: 49%;
+          flex: 48%;
           order: 3;
+          z-index: -1;
+          margin-top: -2px;
+          height: 195%;
 
           img {
-            margin-top: 0;
+            margin-top: 0px;
+            width: 100%;
           }
         }
       
         &:nth-of-type(2) {
-          flex: 51%;
+          z-index: 0;
+          flex: 52%;
           order: 4;
 
-          img {
-            margin-top: 0;
+          img:first-of-type {
+            margin-top: -11px;
+            z-index: 3;
+          }
+          img:last-of-type {
+            margin-top: -30px;
+            z-index: -1;
           }
         }
       
         &:nth-of-type(3) {
           order: 1;
-          flex: 43.6%;
-
-          img {
-            margin-top: 0.5px;
-          }
+          flex: 38.5%;
+          margin-top: -2px;
+          z-index: 1;
         }
       
         &:nth-of-type(4) {
           order: 2;
-          flex: 56.4%;
-          // height: 154px;
-
-          img {
-            margin-top: 1px;
-          }
+          flex: 61.5%;
+          z-index: 2;
         }
       }
 
-      .ripped-top {
-        height: 24px;
+      .one {
+        margin-left: 4px;
       }
 
-      .ripped-bottom {
+      .three {
+        margin-top: -10px;
+      }
+
+      .four {
+        margin-bottom: 0;
+      }
+
+      .ripped-top-mobile {
+        display: block;
         position: absolute;
-        left: 0;
-        z-index: 1;
-        height: 50px;
-        bottom: 0.1px;
+        top: 0;
+        height: 24px;
+        width: 100%;
+        z-index: 3;
+        margin-top: 5px;
       }
 
+      .ripped-bottom-mobile {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        height: 30px;
+        max-height: 60px;
+        width: 100%;
+        margin-bottom: -1px;
+      }
     }
 
     .contact .dream {
       width: auto;
       margin: 50px 6.25% 150px;
-  
+
       .name-email {
         flex-direction: column;
         
@@ -325,4 +535,23 @@
       }
     } 
 
+    .contact {
+      h2 {
+        font-size: 24px;
+      }
+      .form {
+        input, textarea {
+          font-size: 14px;
+        }
+      }
+
+      .important, .rules {
+        font-size: 12px;
+      }
+    }
+      .send {
+        font-size: 18px;
+        width: 140px;
+        height: 48px;
+      }
 }
