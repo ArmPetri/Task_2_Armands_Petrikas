@@ -1,0 +1,59 @@
+@use '../globals/colors';
+@use '../util/fonts';
+
+.main .uznemejiem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 109px 0 50px;
+
+  h1 {
+    margin-bottom: 58px;
+    text-align: center;
+  }  
+  
+  .Text2 {
+    text-align: center;
+    width: 810px;
+  }
+}
+
+.uznemejiem .Text2 {
+  align-self: center;
+}
+
+.contact .uznemejiem {
+  margin: unset;
+  padding: unset;
+  z-index: 5;
+  padding-bottom: -1px;
+}
+
+.uznemejiem h2 {
+  // margin-top: -2px;
+  margin-bottom: 66px;
+
+}
+
+// .form .uznemejiem {
+//   margin-top: 20px;
+// }
+
+.form .company-name {
+  width: 100%;
+}
+
+.uznemejiem .important, .uznemejiem .rules {
+  justify-items: flex-start;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.uznemejiem .rules {
+  margin-top: 30px;
+  letter-spacing: -0.1px;
+}
+
+.uznemejiem button {
+margin-top: unset;
+}

@@ -1662,5 +1662,53 @@ main .hero-image {
     height: 48px;
   }
 }
+.main .uznemejiem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 109px 0 50px;
+}
+.main .uznemejiem h1 {
+  margin-bottom: 58px;
+  text-align: center;
+}
+.main .uznemejiem .Text2 {
+  text-align: center;
+  width: 810px;
+}
+
+.uznemejiem .Text2 {
+  align-self: center;
+}
+
+.contact .uznemejiem {
+  margin: unset;
+  padding: unset;
+  z-index: 5;
+  padding-bottom: -1px;
+}
+
+.uznemejiem h2 {
+  margin-bottom: 66px;
+}
+
+.form .company-name {
+  width: 100%;
+}
+
+.uznemejiem .important, .uznemejiem .rules {
+  justify-items: flex-start;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.uznemejiem .rules {
+  margin-top: 30px;
+  letter-spacing: -0.1px;
+}
+
+.uznemejiem button {
+  margin-top: unset;
+}
 
 /*# sourceMappingURL=style.css.map */
