@@ -1,4 +1,6 @@
-@forward 'globals';
+@use 'resets/normalize';
+// @use 'resets/the_new_css_reset';
+@use 'globals';
 // @forward 'layout';
 
 
@@ -21,7 +23,7 @@
 //   'base/helpers';
 
 // 4. Layout-related sections
-@forward
+@use
   'layout';
 
 // 5. Components
@@ -29,10 +31,11 @@
 //   'components/button';
 
 // 6. Page-specific styles
-@forward 'pages/home';
-@forward 'pages/ideja';
-@forward 'pages/piesaki_sapni';
-@forward 'pages/uznemejiem';
+@use 'pages/home';
+@use 'pages/ideja';
+@use 'pages/piesaki_sapni';
+@use 'pages/uznemejiem';
+@use 'pages/sapnu_banka';
 
 // 7. Themes
 // @forward

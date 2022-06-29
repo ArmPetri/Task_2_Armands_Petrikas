@@ -1,0 +1,140 @@
+@use '../globals/colors';
+@use '../util/fonts';
+
+.sapnu-banka {
+  margin-bottom: 47.4px;
+}
+
+.sapnu-banka .top, .sapnu-banka .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 112px 0 -31px;
+
+  h1 {
+    text-align: center;
+    line-height: 71px;
+  }
+}
+
+.goal-mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 151px;
+  
+  h2:first-of-type {
+    margin: 170px 0 95px;
+  }
+
+  h2:last-of-type {
+    margin: 52px 0 53px;
+  }
+
+  .Text1 {
+    letter-spacing: 0.2px;
+  }
+}
+
+.goal-mission-row {
+  width: 706px;
+  margin-bottom: 106px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  p {
+   margin-left: 62px 
+  }
+
+  &:nth-of-type(2) {
+    flex-direction: row-reverse;
+    margin-left: 0;
+    margin-right: 100px;
+
+    p {
+      margin-left: 0; 
+      margin-right: 62px; 
+     }
+  }
+}
+
+.between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  height: 533px;
+  background-image: url(../img/Subtract.png);
+  background-repeat:no-repeat;
+  background-size: cover;
+  padding: 76px 0 101px;
+  color: colors.$white;
+
+
+  .Text1 {
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+}
+
+.between-img-1 {
+  width: 367.6px;
+  height: 256.63px;
+  margin-left: -2px;
+}
+
+.between-img-2 {
+  width: 401.6px;
+  height: 257px;
+  margin-left: -37px;
+}
+
+.between-text-1 {
+  width: 818px;
+}
+
+.between-text-2 {
+  width: 1031px;
+}
+
+.sapnus-atlasis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 158px 157px 6px;
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 12px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+      margin: 64px 0 150px;
+      height: 265px;
+
+      &:first-of-type {
+        p {
+          margin-bottom: 28px;
+          letter-spacing: 0.2px;
+        }
+      }
+    }
+  }
+}
+
+.sapnu-banka .call-to-action  {
+ padding: 154px 174px 152px;
+}
