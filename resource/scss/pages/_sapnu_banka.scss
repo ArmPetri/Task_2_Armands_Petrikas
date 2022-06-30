@@ -34,6 +34,7 @@
 
   .Text1 {
     letter-spacing: 0.2px;
+    text-align: center;
   }
 }
 
@@ -75,7 +76,6 @@
   padding: 76px 0 101px;
   color: colors.$white;
 
-
   .Text1 {
     text-align: center;
     letter-spacing: 0.2px;
@@ -92,14 +92,6 @@
   width: 401.6px;
   height: 257px;
   margin-left: -37px;
-}
-
-.between-text-1 {
-  width: 818px;
-}
-
-.between-text-2 {
-  width: 1031px;
 }
 
 .sapnus-atlasis {
@@ -137,4 +129,127 @@
 
 .sapnu-banka .call-to-action  {
  padding: 154px 174px 152px;
+}
+
+// Media Queries 
+@media (min-width: 1201px) {
+  .between-text-1 {
+    width: 818px;
+    padding: unset;
+  }
+  
+  .between-text-2 {
+    width: 1031px;
+    padding: unset;
+  }
+}
+@media (max-width: 1200px) {
+  .between-text-1, .between-text-2 {
+    width: 100%;
+    padding: 40px 6.25% 0;
+  }
+  .goal-mission-row {
+    width: unset;
+    padding: 0 6.25%;
+  }
+
+  .goal-mission {
+    .Text1 {
+      width: unset;
+      padding: 0 6.25%;
+    }
+  }
+  .sapnus-atlasis {
+    margin: 158px 80px 6px;
+    div {
+      div {
+        width: unset;
+        &:nth-of-type(1) {
+          padding-right: 20px;
+        }
+        &:nth-of-type(2) {
+          padding-left: 20px;
+        }
+      } 
+      .Text1 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+      
+@media (max-width: 768px) {
+  .sapnu-banka .top {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  .goal-mission h2{
+    font-size: 24px;
+  }
+
+  .goal-mission-row {
+    flex-direction: column;
+    margin-left: unset;
+  
+    p {
+        margin: unset;
+        padding-top: 20px;
+        text-align: center;
+      }
+
+    &:nth-of-type(2) {
+      flex-direction: column;
+      margin-right: unset;
+
+      p {
+        margin-right: unset;
+       }
+    }
+  }
+
+  .sapnu-banka .call-to-action {
+    padding: 154px 6.25% 152px;
+
+    h3 {
+      font-size: 18px;
+    }
+   }
+
+   .between {
+    padding: 76px 6.25% 101px;
+   }
+
+   .between-text-1, .between-text-2 {
+    font-size: 18px;
+    padding: 40px 0 0;
+  }
+  .between-img-1, .between-img-2 {
+    margin-left: unset;
+  }
+
+  .sapnus-atlasis {
+    margin: 120px 6.25%;
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+    }
+    div {
+      flex-direction: column;
+
+      div {
+        margin: 60px 0 0;
+
+        &:nth-of-type(1) {
+          padding-right: unset;
+        }
+        &:nth-of-type(2) {
+          padding-left: unset;
+        }
+      }
+    }
+  }
 }
