@@ -1,6 +1,5 @@
 @use 'resets/normalize';
 // @use 'resets/the_new_css_reset';
-@use 'globals';
 // @forward 'layout';
 
 
@@ -12,10 +11,12 @@
 //   'abstracts/mixins';
 
 // 2. Vendors
+
 // @forward
 //   'vendors/normalize';
 
 // 3. Base stuff
+@use 'base';
 // @forward
 //   'base/base',
 //   'base/fonts',
@@ -23,21 +24,24 @@
 //   'base/helpers';
 
 // 4. Layout-related sections
-@use
-  'layout';
+@use 'layout';
 
 // 5. Components
+@use 'components';
 // @forward
 //   'components/button';
 
 // 6. Page-specific styles
-@use 'pages/home';
-@use 'pages/ideja';
-@use 'pages/piesaki_sapni';
-@use 'pages/uznemejiem';
-@use 'pages/sapnu_banka';
+@use 'pages';
+// @use 'pages/home';
+// @use 'pages/ideja';
+// @use 'pages/piesaki_sapni';
+// @use 'pages/uznemejiem';
+// @use 'pages/sapnu_banka';
+// @use 'pages/sapnus_atbalsta';
 
 // 7. Themes
 // @forward
 //   'themes/default';
+@use 'util'
 

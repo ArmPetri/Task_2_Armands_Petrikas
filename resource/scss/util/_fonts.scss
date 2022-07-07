@@ -7,10 +7,15 @@
   src: url('../../assets/font/Montserrat/static/Montserrat-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 @font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../../assets/font/Montserrat/static/Montserrat-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
   font-family: 'Oswald';
   src: url('../../assets/font/Oswald/static/Oswald-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 $Montserrat: 'Montserrat-Regular', sans-serif;
 $MontserratM: 'Montserrat-Medium', sans-serif;
+$MontserratB: 'Montserrat-Bold', sans-serif;
 $Oswald: 'Oswald', sans-serif;

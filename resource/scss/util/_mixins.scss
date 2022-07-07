@@ -1,0 +1,32 @@
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin size($width: 100%, $height: auto, $min-height: 0) {
+  width: $width;
+  height: $height;
+  min-height: $min-height;
+}
+
+@mixin position($position: relative, $top: initial, $left: initial, $right: initial, $bottom: initial) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin padding ($top: 0, $right: 6.25%, $bottom: 0, $left: 6.25%) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin background($background, $background-repeat: no-repeat, $background-size: cover){
+  background: $background;
+  background-repeat: $background-repeat;
+  background-size: $background-size;
+}
+

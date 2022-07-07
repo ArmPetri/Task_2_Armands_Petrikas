@@ -7,6 +7,10 @@
   src: url("../../assets/font/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../../assets/font/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
   font-family: "Oswald";
   src: url("../../assets/font/Oswald/static/Oswald-Medium.ttf") format("truetype");
 }
@@ -37,6 +41,7 @@ picture {
 h1, h2, h3 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
+  font-style: normal;
 }
 
 h1,
@@ -60,24 +65,55 @@ h1 {
 
 h2 {
   font-size: 30px;
+  line-height: 44.46px;
 }
 
 h3 {
   font-size: 24px;
+  line-height: 35.57px;
 }
 
 .Text1 {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 24px;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 29.26px;
 }
 
 .Text2 {
   font-family: "Montserrat-Regular", sans-serif;
-  font-size: 18px;
+  font-style: normal;
   font-weight: 400;
+  font-size: 18px;
   line-height: 22px;
+}
+
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 18px;
+    line-height: 26.68px;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 53.35px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 35.57px;
+  }
+
+  .Text1 {
+    font-size: 18px;
+    line-height: 21.94px;
+  }
+
+  .Text2 {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

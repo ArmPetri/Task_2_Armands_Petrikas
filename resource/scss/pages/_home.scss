@@ -1,33 +1,39 @@
-@use '../globals/colors';
+@use '../base/colors';
 @use '../util/fonts';
+@use '../util/mixins' as mix;
 
 main {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
-  .hero-wave {
-    position: absolute;
-    margin-top: -0.4rem;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-  }
+  @include mix.flex($direction: column, $align: initial);
+
+  // .hero-wave {
+  //   position: absolute;
+  //   margin-top: -0.4rem;
+  //   left: 0;
+  //   width: 100%;
+  //   z-index: 2;
+  // }
 
   .hero {
+    @include mix.size;
     width: 100%;
     height: auto;
-    z-index: 1;
+    z-index: -1;
     position: relative;
-    margin-top: -1.2rem;
+    // margin-top: -58px;
 
     .play-button {
       transition: all 0.1s ease-in-out;
       margin: 0;
       position: absolute;
-      top: 50%;
-      left: 50.5%;
+      top: 50.5%;
+      left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 2;
 
       &:hover {
       opacity: 0.9;
@@ -37,24 +43,29 @@ main {
   }
 
   .hero-image {
-    width: 100%;;
-    height: auto
+    // width: 100%;
+    // height: auto;
+    @include mix.size;
   }
+
+  // .contact {
+  //   margin: 0 auto 151px;
+  // }
 }
 
 .description {
   padding: 132px 355px 150px;
-  font-family: fonts.$Montserrat;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  // font-family: fonts.$Montserrat;
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 18px;
+  // line-height: 22px;
   text-align: center;
   color: colors.$dark-blue;
   margin-bottom: 1px;
 
-  p {
-    margin-right: -19px;
+  .Text2 {
+    margin-right: -7px;
   }
 }
 
@@ -73,7 +84,6 @@ main {
     transform: rotate(180deg);
     height: 63px;
   }
-
 
   .ripped-bottom {
     position: absolute;
@@ -115,7 +125,6 @@ main {
   margin-top: 1.6rem;
 }
 
-
 .three {
   width: 100%;
   margin-top: 1.4499999999999993rem;
@@ -153,11 +162,11 @@ main {
     }
 
     h3 {
-      font-family: fonts.$Oswald;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 36px;
+      // font-family: fonts.$Oswald;
+      // font-style: normal;
+      // font-weight: 500;
+      // font-size: 24px;
+      // line-height: 36px;
       text-align: center;
       color: colors.$dark-blue;
       padding-bottom: 50px;
@@ -199,17 +208,17 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 612px;
-  margin: 0 auto 150px;
+  // margin: 61px auto 151px;
 
   h2 {
-    font-family: fonts.$Oswald;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 44px;
+    // font-family: fonts.$Oswald;
+    // font-style: normal;
+    // font-weight: 500;
+    // font-size: 30px;
+    // line-height: 44px;
     text-align: center;
     color: colors.$dark-blue;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     text-align: center;
   }
 }
@@ -310,14 +319,14 @@ main {
   font-size: 14px;
   line-height: 17px;
   color: colors.$dark-blue;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
 
   input {
     background-color: #E7E7E7;
   }
 
   span {
-    margin-left: 1.2rem;
+    margin-left: 27px;
   }
 }
 
@@ -336,7 +345,6 @@ main {
   transition: all 0.1s ease-in-out;
   align-self: center;
   justify-self: center;
-  margin-top: 0.2rem;
 
   &:hover {
     background-color: colors.$hover;
@@ -349,13 +357,18 @@ main {
 }
 
 .supporters {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 168px 63px;
-  z-index: 2;
-  height: 481.32px;
+  padding: 0 168px 108px;
+  z-index:-1;
+  // height: 481.32px;
+  height: 533.32px;
   background-image: url(../img/Subtract.png);
+  background-size: cover;
+  margin-bottom: -81px;
+  // visibility: hidden;
   
   h3 {
     font-family: fonts.$Oswald;
@@ -416,25 +429,29 @@ main {
 
 .mobile-nav {
   position: fixed;
+  // padding-top: 80px;
   left: 100%;
   width: 100vw;
+  bottom: 0;
   height: 100%;
   display: block;
   background-color: colors.$white;
   transition: 0.4s;
+  // transition: 5s;
   z-index: 5;
 }
 
  .active {
+  // padding-top: 80px;
     top: 55px;
     left: 0;
-    right: 0;
-    bottom: 0;
+    // right: 0;
+    // bottom: 0;
   }
 
 .languages {
   display: flex;
-  margin: 0 80px;
+  // margin: 0 80px;
 }
 
 .mobile-nav a {
@@ -462,6 +479,8 @@ main {
     height: 722px; 
     top: -1rem;
     position: relative;
+    // margin-top: -30px;
+    margin-top: -58px;
 
     .play-button {
       min-width: 86px;
@@ -472,12 +491,21 @@ main {
   .mobile-nav {
     display: none;
   }
+
+  .contact {
+    margin: 0 auto 148px;
+  }
+
+  // .suporters {
+  //   padding: 0 168px 63px;
+  //   padding: 0 168px 63px;
+  // }
 }
 
 @media (max-width: 1200px) {
   .hero {
     max-height: 722px; 
-
+    margin-top: -39px;
     width: 100%;
     top: 1rem;
     background-size: cover;
@@ -486,11 +514,11 @@ main {
       max-width: 86px;
        max-height: 83px;
      }
-    
     }  
     
   .description {
-    padding: 150px 80px;
+    // padding: 150px 80px;
+    padding: 93px 6.25% 41px;
   }
 
   .supporters {
@@ -506,9 +534,11 @@ main {
 
   .active {
     padding-top: 80px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 5;
   }
   
   .languages {
@@ -537,9 +567,15 @@ main {
 
   .sticky {
     position:fixed;
-    top: 0;
+    // top: -35px;
+    // top: -56px;
     left: 0;
     right: 0;
+  }
+
+  .contact {
+    padding: 0 6.25%;
+    margin: 0 auto 151px;
   }
 }
 
@@ -548,6 +584,9 @@ main {
     position: unset;
     background-size: contain;
     max-width: 100%;
+    // margin-top: -25px;
+    // margin-top: -87px;
+    margin-top: -28px;
 
     .play-button {
       min-width: 50px;
@@ -564,22 +603,22 @@ main {
     z-index: 2;
   }
 
-  .description {
-    padding: 80px 20px;
-    font-size: 12px;
-  }
+  // .description {
+  //   // padding: 80px 20px;
+  //   font-size: 12px;
+  // }
 
   .call-to-action {
     flex-direction: column;
-    padding: 120px 40px;
+    padding: 0 6.25%;
 
     div {
       margin: 0;
       margin-left: unset;
 
-      &:first-of-type {
-        margin-bottom: 80px;
-      }
+      // &:first-of-type {
+      //   margin-bottom: 80px;
+      // }
     }
   }
 
@@ -632,7 +671,7 @@ main {
           flex: 56.4%;
 
           img {
-            margin-top: 1px;
+            margin-top: 1.5px;
           }
         }
       }
@@ -651,8 +690,11 @@ main {
   }
 
   .supporters {
-    z-index: 0;
+    // z-index: 0;
     padding: 10px;
+    padding: 20px 6.25%;
+    position: relative;
+    bottom: -30px;
   }
 
   h3 {
@@ -664,6 +706,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
 
     div {
       max-width: 40%;
@@ -677,7 +720,8 @@ main {
 
   .contact {
     width: auto;
-    margin: 0 20px 120px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 
     .name-email {
       flex-direction: column;

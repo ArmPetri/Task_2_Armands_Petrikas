@@ -1,0 +1,82 @@
+@use '../util';
+@use '../base/breakpoints' as breakpoints;
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+p
+{
+  margin: 0;
+}
+
+a,
+a:visited, 
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 71px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 44.46px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 35.57px;
+}
+
+.Text1 {
+  font-family: util.$Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+}
+
+.Text2 {
+  font-family: util.$Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (max-width: breakpoints.$medium){
+  h3 {
+    font-size: 18px;
+    line-height: 26.68px;
+  }
+}
+
+@media (max-width: breakpoints.$small) {
+  h1 {
+    font-size: 36px;
+    line-height: 53.35px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 35.57px;
+  }
+
+  .Text1 {
+    font-size: 18px;
+    line-height: 21.94px;
+  }
+
+  .Text2 {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
+}

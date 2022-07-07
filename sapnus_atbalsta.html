@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/Favicon_small.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Favicon_medium.png">
+  <link rel="icon" type="image/png"  sizes="96x96" href="./assets/img/Favicon_large.png">
+  <title>Home</title>
+</head>
+<body>
+  <header class="header">
+    <img class="logo" id="logo" src="assets/img/BlackLogo 3.svg" alt="#">
+    <nav class="nav" id="links">
+      <a class="nav-link" href="ideja.html">Ideja</a>
+      <a class="nav-link" href="piesaki_sapni.html">Piesaki Sapni</a>
+      <a class="nav-link" href="uznemejiem.html">Uzņēmējiem</a>
+      <a class="nav-link" href="sapnu_banka.html">Sapņu banka</a>
+      <a class="nav-link" href="sapnus_atbalsta.html">Sapņus atbalsta</a>
+      <a class="nav-link" href="">99 Iedvesmas stāsti</a>
+      <select class="language" name="lV">
+        <option lang="lV" value="LV">LV</option>
+        <option lang="EN" value="EN">EN</option>
+        <option lang="RU" value="RU">RU</option>
+      </select>
+    </nav>
+    <button class="hamburger" id="hamburger">
+      <div class="bar"></div>
+    </button>
+    <nav class="mobile-nav" id="mobile-nav">
+      <div class="languages">
+        <a href=#">LV</a>
+        <a href="#">EN</a>
+        <a href="#">RU</a>
+      </div>
+        <a class="nav-link" href="ideja.html">Ideja</a>
+        <a class="nav-link" href="piesaki_sapni.html">Piesaki Sapni</a>
+        <a class="nav-link" href="uznemejiem.html">Uzņēmējiem</a>
+        <a class="nav-link" href="sapnu_banka.html">Sapņu banka</a>
+        <a class="nav-link" href="sapnus_atbalsta.html">Sapņus atbalsta</a>
+        <a class="nav-link" href="">99 Iedvesmas stāsti</a>
+    </nav>
+  </header>
+  <main class="main sapnus-atbalsta">
+    <section class="top">
+      <h1>SAPŅUS ATBALSTA</h1>
+      <p class="Text2">Sadarbības partneri ir uzņēmumi, kuri savā preču vai pakalpojumu ikdienā ir integrējuši SparkleHeart zīmolu un dala ar to konkrētu daļu savu ienākumu.
+      </p>
+    </section>
+
+    <section class="location">
+      <div class="select js-hybridSelect">
+        <p class="Text2">Uzņemuma atrašanas vieta</p>
+
+        <div class="selectWrapper">
+          <select class="selectNative js-selectNative" name="Izvēlies"  aria-labelledby="jobLabel">
+            <option value="Izvēlies" disabled="" selected="">Izvēlies</option>
+            <option value="Rīga">Rīga</option>
+            <option value="Jelgava">Jelgava</option>
+            <option value="Ogre">Ogre</option>
+            <div></div>
+          </select>
+
+          <div class="selectCustom js-selectCustom" aria-hidden="true">
+            <div class="selectCustom-trigger">Izvēlies<div class="select-border"></div></div>
+            
+            <div class="selectCustom-options">
+              <div class="selectCustom-option" data-value="Rīga">Rīga</div>
+              <div class="selectCustom-option" data-value="Jelgava">Jelgava</div>
+              <div class="selectCustom-option" data-value="Ogre">Ogre</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="select js-hybridSelect">
+        <p class="Text2">Uzņēmuma veids</p>
+
+        <div class="selectWrapper">
+          <select class="selectNative js-selectNative" name="Izvēlies"  aria-labelledby="jobLabel">
+            <option value="Izvēlies" disabled="" selected="">Izvēlies</option>
+            <option value="Ēdināšana">Ēdināšana</option>
+            <div></div>
+          </select>
+
+          <div class="selectCustom js-selectCustom" aria-hidden="true">
+            <div class="selectCustom-trigger">Izvēlies<div class="select-border"></div></div>
+            
+            <div class="selectCustom-options">
+              <div class="selectCustom-option" data-value="Ēdināšana">Ēdināšana</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="map">
+    </section>  
+  </main>
+  <!-- <img src="./assets/img/ripped 6 7.png" alt="" class="mask"> -->
+  <button id="scrollUpButton" class="scroll_up"><img class="scroll_arrow" src="./assets/img/Arrow.svg" alt="here"></button>
+  <!-- <footer>
+    <img class="footer-ripped" src="./assets/img/ripped 6 7.png" alt="#">
+    <div class="footer-rows">
+      <div class="row">
+        <img class="footer-logo" src="./assets/img/GoldenV2Logo 3.png" alt="#">
+        <p class="Text1">Juris Gogulis</p>
+        <small>© SparkleHeart 2020.<br>Visas tiesības aizsargātas.</small>
+      </div>
+      <div class="row">
+        <p>Ideja</p>
+        <p>Piesaki Sapni</p>
+        <p>Uzņēmējiem</p>
+        <p>Sapņu banka</p>
+        <p>Sapņus atbalsta</p>
+        <p>Iedvesmas stāsti</p>
+      </div>
+      <div class="row">
+        <p class="Text1">Biedrība SparkleHeart</p>
+        <p class="Text2">Reģistrācijas nr. 40008293119</p>
+        <p class="Text2">Banka: SWEDBANK A/S</p>
+        <p class="Text2">LV52HABA0551047652465</p>
+      </div>
+      <div class="row">
+        <p class="Text1">Juris Gogulis</p>
+        <p class="Text2">juris.gogulis@sparkleheart.org</p>
+        <p class="Text2">+37126890034</p>
+        <p class="Text2">Biķernieku iela 24a - 5, LV-1006</p>
+        <p class="Text1">Skatīt rekvizītus</p>
+        <div class="socials">
+          <img src="./assets/img/facebook.svg" alt="#">
+          <img src="./assets/img/instagram.svg" alt="#">
+        </div>
+        <small>Privātuma politika</small>
+      </div>
+    </div>
+  </footer> -->
+
+  <!-- Alternate footer  -->
+  <footer>
+    <div class="footer-rows">
+      <div class="row">
+        <img class="footer-logo" src="./assets/img/GoldenV2Logo 3.png" alt="#">
+        <p class="Text1">Juris Gogulis</p>
+        <small>© SparkleHeart 2020.<br>Visas tiesības aizsargātas.</small>
+      </div>
+      <div class="row">
+        <p>Ideja</p>
+        <p>Piesaki Sapni</p>
+        <p>Uzņēmējiem</p>
+        <p>Sapņu banka</p>
+        <p>Sapņus atbalsta</p>
+        <p>Iedvesmas stāsti</p>
+      </div>
+      <div class="row">
+        <p class="Text1">Biedrība SparkleHeart</p>
+        <p class="Text2">Reģistrācijas nr. 40008293119</p>
+        <p class="Text2">Banka: SWEDBANK A/S</p>
+        <p class="Text2">LV52HABA0551047652465</p>
+      </div>
+      <div class="row">
+        <p class="Text1">Juris Gogulis</p>
+        <p class="Text2">juris.gogulis@sparkleheart.org</p>
+        <p class="Text2">+37126890034</p>
+        <p class="Text2">Biķernieku iela 24a - 5, LV-1006</p>
+        <p class="Text1">Skatīt rekvizītus</p>
+        <div class="socials">
+          <img src="./assets/img/facebook.svg" alt="#">
+          <img src="./assets/img/instagram.svg" alt="#">
+        </div>
+        <small>Privātuma politika</small>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>

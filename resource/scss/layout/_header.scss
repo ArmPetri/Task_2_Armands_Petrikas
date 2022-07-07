@@ -1,29 +1,23 @@
-@use '../globals/colors';
+@use '../base/colors';
 @use '../util/fonts';
+@use '../util/mixins' as mix;
+@use '../base/breakpoints' as breakpoints;
 
 .header {
-  height: 92.51px;
-  display: flex;
-  flex-direction: row;
-  padding: 0px 45px;
-  position: relative;
+  @include mix.size($min-height: 120px);
+  @include mix.background($background: url(../../../assets/img/header\ background.png));
+  @include mix.padding($right: 45px, $left: 45px);
+  @include mix.flex($justify: space-between, $align: center);
   z-index: 3;
-  margin: 0;
-  background: colors.$white;
-  justify-content: space-between;
-
+  
   .logo {
-    position: absolute;
+    @include mix.position($position: absolute, $top: -15px, $left: 62px);
     Width: 159px;
     Height: 146px;
-    left: 62px;
-    top: -15px;
     z-index: 6;
   }
 
   .nav {
-
-
     .nav-link {
       font-family: fonts.$MontserratM;
       font-style: normal;
@@ -66,7 +60,7 @@
   }
 
   .hamburger {
-    position: relative;
+    @include mix.position($top: 22px);
     display: block;
     width: 35px;
     cursor: pointer;
@@ -79,12 +73,19 @@
   
   .hamburger .bar, .hamburger:after, .hamburger:before {
     content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
+    @include mix.size($height: 3px);
     background-color: colors.$navbar;
-    margin: 6px 0px;
+    margin: 4px 0px;
+    display: block;
     transition: 0.4s;
+  }
+  
+  .is-active {
+    top: 26px;
+  }
+
+  .hamburger.is-active:after {
+    margin: 12px 0;
   }
   
   .hamburger.is-active:before {
@@ -107,17 +108,19 @@
   
 
   // Media Queries 
-@media (min-width: 1201px) {
+@media (min-width: breakpoints.$large){
+  .header {
+    @include mix.size($min-height: 120px);
+  }
+
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-end;
+    @include mix.flex($justify: space-between, $align: flex-end);
     width: 100%;
     height: 45px;
-    margin-top: 33px;
-    padding-bottom: 3px;
+    padding-bottom: 8px;
     margin-left: 258px;
   }
+
   .mobile-nav {
 		display: none;
 	}
@@ -127,44 +130,47 @@
 	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: breakpoints.$medium){
   .header {
-    display: flex;
-    justify-content: space-between;
+    @include mix.flex($justify: space-between);
+    @include mix.size($min-height: 96px);
+    padding: 80px;
   }
 
   .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include mix.position($position: fixed, $top: -35px, $left: 0);
   }
 
   .logo {
-    position: static;
-    left: 20px;
-    margin-top: 5px;
-    width: 78px;
-    height: 72px;
+    @include mix.position($position: static, $left: 112px);
+    width: 127px;
+    height: 107px;
     z-index: 6;
   }
+
+
 
   .nav {
     display: none;
     }
   }
+
+  .hamburger {
+    top: -5px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: breakpoints.$small) {
   .header{
-    height: 58.09px;
+    @include mix.size($min-height: 67.09px);
+    position: relative;
+    @include mix.padding;
+    background-position: center;
     justify-content: space-between;
     text-align: center;
-    padding: 0 20px;
 
     .logo {
-      position: static;
-      left: 20px;
-      margin-top: 5px;
+      @include mix.position($position: static, $left: 20px);
       width: 78px;
       height: 72px;
       z-index: 10;

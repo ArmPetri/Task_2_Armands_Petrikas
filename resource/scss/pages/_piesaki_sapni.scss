@@ -1,4 +1,4 @@
-@use '../globals/colors';
+@use '../base/colors';
 @use '../util/fonts';
 
 .dream {
@@ -536,9 +536,9 @@
     } 
 
     .contact {
-      h2 {
-        font-size: 24px;
-      }
+      // h2 {
+      //   font-size: 24px;
+      // }
       .form {
         input, textarea {
           font-size: 14px;
