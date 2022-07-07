@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 112px 0 -31px;
+  margin: 86px 0 -7px;;
 
   h1 {
     text-align: center;
@@ -25,11 +25,11 @@
   margin-bottom: 151px;
   
   h2:first-of-type {
-    margin: 170px 0 95px;
+    margin: 142px 0 90px;
   }
 
   h2:last-of-type {
-    margin: 52px 0 53px;
+    margin: 48px 0 48px;
   }
 
   .Text1 {
@@ -99,7 +99,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 158px 157px 6px;
+  margin: 152px 157px 3px;
 
   div {
     display: flex;
@@ -114,12 +114,12 @@
       align-items: center;
       text-align: center;
       width: 30%;
-      margin: 64px 0 150px;
+      margin: 59px 0 154px;
       height: 265px;
 
       &:first-of-type {
         p {
-          margin-bottom: 28px;
+          margin-bottom: 25px;
           letter-spacing: 0.2px;
         }
       }
@@ -128,7 +128,7 @@
 }
 
 .sapnu-banka .call-to-action  {
- padding: 154px 174px 152px;
+  padding: 154px 174px 102px;
 }
 
 // Media Queries 
@@ -211,10 +211,14 @@
   }
 
   .sapnu-banka .call-to-action {
-    padding: 154px 6.25% 152px;
+    padding: 50px 6.25% 10px;
 
     h3 {
       font-size: 18px;
+    }
+
+    div:nth-of-type(2) {
+      margin-top: 70px;
     }
    }
 

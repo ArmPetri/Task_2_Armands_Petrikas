@@ -1,21 +1,22 @@
 @use '../base/colors';
 @use '../util/fonts';
 
-.dream {
+.piesaki-sapni {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 112.5px 0 50px;
+  padding: 86px 0 50px;
 
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 59px;
   }  
 
   .Text1 {
     line-height: 29px;
     text-align: center;
+    letter-spacing: 0.2px;
   }
 }
 
@@ -24,8 +25,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 150px;
-  margin: 0 35px;
+  padding-bottom: 147px;
+  margin: 0 47px;
 
 
   div {
@@ -38,10 +39,12 @@
     text-align: center;
     width: 394px;
     height: 594px;
-    margin-top: 40px;
+    margin-top: 42px;
 
     p {
       margin-bottom: 50px;
+      margin-bottom: 51px;
+      margin-top: -11px;
     }
 
     button {
@@ -70,7 +73,7 @@
 
   div:nth-of-type(1) {
     h2 {
-      margin-top: 30px;
+      margin-top: 26px;
     }
     button {
       margin-top: 60px;
@@ -78,11 +81,15 @@
   }
 
   div:nth-of-type(2) {
+    h2 {
+      margin-top: 5px;
+    }
+
     img {
       margin-bottom: 49px;
     }
     p {
-      margin-top: 30px;
+      margin-top: 21px;
     }
   }
 }
@@ -175,10 +182,14 @@
   }
 }
 
- .contact .dream {
-  margin: 65px auto 196px;
+.dream .contact  {
+  margin: 67px auto 151px;
   z-index: 5;
   padding-bottom: -1px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
 
   .form {
     margin-top: 0;
@@ -186,6 +197,10 @@
 
   .button {
     margin-top: 10px;
+  }
+
+  .rules {
+    padding-bottom: 29px;
   }
 }
 
@@ -536,9 +551,6 @@
     } 
 
     .contact {
-      // h2 {
-      //   font-size: 24px;
-      // }
       .form {
         input, textarea {
           font-size: 14px;

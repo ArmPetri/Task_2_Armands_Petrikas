@@ -2,7 +2,7 @@
 @use '../util/fonts';
 
 .uznemejiem {
-  padding: 112px 0 50px;
+  padding: 86px 0 50px;
 
   .top {
     display: flex;
@@ -22,7 +22,7 @@
 
   .contact  {
     z-index: 5;
-    margin: 150px auto 100px;
+    margin: 155px auto 100px;
     z-index: -1;
 
 
@@ -60,7 +60,7 @@
 
 @media (max-width: 1200px) {
   .uznemejiem {
-    padding: 0 6.25%;
+    padding: 86px 0% 50px;
   }
   
  .uznemejiem .Text2{

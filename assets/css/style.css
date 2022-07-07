@@ -1593,10 +1593,10 @@ main .hero-image {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 112.5px 0 150px;
+  padding: 85.5px 0 150px;
 }
 .idea h1 {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 .idea p {
   width: 606px;
@@ -1641,13 +1641,17 @@ main .hero-image {
 
 .ken {
   position: relative;
-  padding: 150px 0 205px;
+  padding: 150px 0 155px;
   z-index: 10;
   margin-bottom: -6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.ken .text-wrapper {
+  margin-left: -16px;
+  margin-top: 1px;
 }
 .ken h3 {
   line-height: 36px;
@@ -1660,20 +1664,21 @@ main .hero-image {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  margin-top: 30px;
+  margin-top: 32px;
   font-style: italic;
+  letter-spacing: 0.18px;
 }
 .ken .arrows {
   display: flex;
   margin-top: 30px;
 }
 .ken .arrow-right {
-  margin-left: 46px;
+  margin-left: 45px;
 }
 
 @media (min-width: 1201px) {
   .juris-text {
-    bottom: 88px;
+    bottom: 85px;
   }
 }
 @media (max-width: 1200px) {
@@ -1724,20 +1729,21 @@ main .hero-image {
     font-size: 12px;
   }
 }
-.dream {
+.piesaki-sapni {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 112.5px 0 50px;
+  padding: 86px 0 50px;
 }
-.dream h1 {
-  margin-bottom: 60px;
+.piesaki-sapni h1 {
+  margin-bottom: 59px;
 }
-.dream .Text1 {
+.piesaki-sapni .Text1 {
   line-height: 29px;
   text-align: center;
+  letter-spacing: 0.2px;
 }
 
 .choose-dream {
@@ -1745,8 +1751,8 @@ main .hero-image {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 150px;
-  margin: 0 35px;
+  padding-bottom: 147px;
+  margin: 0 47px;
 }
 .choose-dream div {
   display: flex;
@@ -1758,10 +1764,12 @@ main .hero-image {
   text-align: center;
   width: 394px;
   height: 594px;
-  margin-top: 40px;
+  margin-top: 42px;
 }
 .choose-dream div p {
   margin-bottom: 50px;
+  margin-bottom: 51px;
+  margin-top: -11px;
 }
 .choose-dream div button {
   font-family: "Montserrat-Regular", sans-serif;
@@ -1784,16 +1792,19 @@ main .hero-image {
   background-color: #FFA800;
 }
 .choose-dream div:nth-of-type(1) h2 {
-  margin-top: 30px;
+  margin-top: 26px;
 }
 .choose-dream div:nth-of-type(1) button {
   margin-top: 60px;
+}
+.choose-dream div:nth-of-type(2) h2 {
+  margin-top: 5px;
 }
 .choose-dream div:nth-of-type(2) img {
   margin-bottom: 49px;
 }
 .choose-dream div:nth-of-type(2) p {
-  margin-top: 30px;
+  margin-top: 21px;
 }
 
 .people-2 {
@@ -1867,16 +1878,22 @@ main .hero-image {
   bottom: 5.1rem;
 }
 
-.contact .dream {
-  margin: 65px auto 196px;
+.dream .contact {
+  margin: 67px auto 151px;
   z-index: 5;
   padding-bottom: -1px;
 }
-.contact .dream .form {
+.dream .contact h2 {
+  margin-bottom: 50px;
+}
+.dream .contact .form {
   margin-top: 0;
 }
-.contact .dream .button {
+.dream .contact .button {
   margin-top: 10px;
+}
+.dream .contact .rules {
+  padding-bottom: 29px;
 }
 
 .footer {
@@ -2172,7 +2189,7 @@ main .hero-image {
   }
 }
 .uznemejiem {
-  padding: 112px 0 50px;
+  padding: 86px 0 50px;
 }
 .uznemejiem .top {
   display: flex;
@@ -2188,7 +2205,7 @@ main .hero-image {
 }
 .uznemejiem .contact {
   z-index: 5;
-  margin: 150px auto 100px;
+  margin: 155px auto 100px;
   z-index: -1;
 }
 .uznemejiem .contact h2 {
@@ -2217,7 +2234,7 @@ main .hero-image {
 }
 @media (max-width: 1200px) {
   .uznemejiem {
-    padding: 0 6.25%;
+    padding: 86px 0% 50px;
   }
 
   .uznemejiem .Text2 {
@@ -2263,7 +2280,7 @@ main .hero-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 112px 0 -31px;
+  margin: 86px 0 -7px;
 }
 .sapnu-banka .top h1, .sapnu-banka .hero h1 {
   text-align: center;
@@ -2278,10 +2295,10 @@ main .hero-image {
   margin-bottom: 151px;
 }
 .goal-mission h2:first-of-type {
-  margin: 170px 0 95px;
+  margin: 142px 0 90px;
 }
 .goal-mission h2:last-of-type {
-  margin: 52px 0 53px;
+  margin: 48px 0 48px;
 }
 .goal-mission .Text1 {
   letter-spacing: 0.2px;
@@ -2345,7 +2362,7 @@ main .hero-image {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 158px 157px 6px;
+  margin: 152px 157px 3px;
 }
 .sapnus-atlasis div {
   display: flex;
@@ -2360,16 +2377,16 @@ main .hero-image {
   align-items: center;
   text-align: center;
   width: 30%;
-  margin: 64px 0 150px;
+  margin: 59px 0 154px;
   height: 265px;
 }
 .sapnus-atlasis div div:first-of-type p {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   letter-spacing: 0.2px;
 }
 
 .sapnu-banka .call-to-action {
-  padding: 154px 174px 152px;
+  padding: 154px 174px 102px;
 }
 
 @media (min-width: 1201px) {
@@ -2442,10 +2459,13 @@ main .hero-image {
   }
 
   .sapnu-banka .call-to-action {
-    padding: 154px 6.25% 152px;
+    padding: 50px 6.25% 10px;
   }
   .sapnu-banka .call-to-action h3 {
     font-size: 18px;
+  }
+  .sapnu-banka .call-to-action div:nth-of-type(2) {
+    margin-top: 70px;
   }
 
   .between {
@@ -2485,7 +2505,7 @@ main .hero-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 109px 0 50px;
+  padding: 82px 0 50px;
 }
 .sapnus-atbalsta .top {
   width: 810px;
@@ -2536,7 +2556,7 @@ main .hero-image {
 }
 .location .selectWrapper {
   position: relative;
-  margin-top: 16px;
+  margin-top: 15px;
 }
 .location .selectNative,
 .location .selectCustom-trigger {

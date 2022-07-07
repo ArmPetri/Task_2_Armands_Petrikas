@@ -7,10 +7,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 112.5px 0 150px;
+  padding: 85.5px 0 150px;
 
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 59px;
   }  
 
   p {
@@ -63,13 +63,18 @@
 
 .ken {
   position: relative;
-  padding: 150px 0 205px;
+  padding: 150px 0 155px;
   z-index: 10;
   margin-bottom: -6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .text-wrapper {
+    margin-left: -16px;
+    margin-top: 1px;
+  }
 
   h3 {
     line-height: 36px;
@@ -84,8 +89,9 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-    margin-top: 30px;
+    margin-top: 32px;
     font-style: italic;
+    letter-spacing: 0.18px;
   }
 
   .arrows {
@@ -95,13 +101,13 @@
 
 
   .arrow-right {
-    margin-left: 46px;
+    margin-left: 45px;
   }
 }
 
 @media (min-width: 1201px) {
   .juris-text {
-    bottom: 88px;
+    bottom: 85px;
   }
 }
 @media (max-width: 1200px) {
