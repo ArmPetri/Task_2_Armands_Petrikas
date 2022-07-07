@@ -651,35 +651,34 @@ h3 {
   }
 }
 footer {
-  background: url(../../../assets/img/footer\ background.png) no-repeat;
+  background: url(../../../assets/img/footer\ background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 376px;
   width: 100%;
+  height: auto;
+  min-height: 376px;
   padding-top: 70px 82px 20px 82px;
   z-index: 4;
   display: flex;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .footer-rows {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 78px 62px 15px;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
   padding: 70px 62px 17px;
 }
 
 .row {
   width: 100%;
+  height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 100%;
 }
 .row:nth-of-type(1) {
   width: 83%;
@@ -743,6 +742,7 @@ footer {
   line-height: 22px;
   text-align: right;
   color: #FFFFFF;
+  letter-spacing: 0.2px;
 }
 .row:nth-of-type(4) p:nth-of-type(1) {
   font-family: "Montserrat-Regular", sans-serif;
@@ -754,13 +754,13 @@ footer {
   color: #FFFFFF;
 }
 .row:nth-of-type(4) p:nth-of-type(2) {
-  margin-top: -0.5rem;
+  margin-top: -4px;
 }
 .row:nth-of-type(4) p:nth-of-type(3) {
-  margin-top: -0.4rem;
+  margin-top: -6px;
 }
 .row:nth-of-type(4) p:nth-of-type(4) {
-  padding-bottom: 33px;
+  padding-bottom: 38px;
 }
 .row:nth-of-type(4) small {
   font-family: "Montserrat-Regular", sans-serif;
@@ -787,8 +787,45 @@ footer {
   .footer {
     height: 382px;
   }
+
+  .row:nth-of-type(4) p:nth-of-type(2) {
+    margin-top: 0;
+  }
+
+  .row:nth-of-type(4) p:nth-of-type(4) {
+    padding-bottom: 38px;
+  }
+
+  .row:nth-of-type(4) p:nth-of-type(3) {
+    margin-top: 0;
+  }
+
+  .socials {
+    margin-bottom: 12px;
+  }
 }
 @media (max-width: 1200px) {
+  .footer-rows {
+    height: 100%;
+  }
+  .footer-rows .row:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-rows .row:nth-of-type(1) img {
+    width: 160px;
+    height: 160px;
+  }
+  .footer-rows .row:nth-of-type(1) p {
+    margin-top: 31px;
+  }
+  .footer-rows .row:nth-of-type(1) small {
+    margin-top: 40px;
+  }
+  .footer-rows .row:nth-of-type(1) small br {
+    display: none;
+  }
   .footer-rows div:nth-of-type(1) p {
     display: block;
     font-family: "Montserrat-Regular", sans-serif;
@@ -811,21 +848,35 @@ footer {
   .footer-rows div:nth-of-type(4) p:first-of-type {
     display: none;
   }
+  .footer-rows div:nth-of-type(4) p:nth-of-type(3) {
+    margin-top: 10px;
+  }
   .footer-rows div:nth-of-type(4) p:nth-of-type(4) {
+    margin-top: 10px;
     padding-bottom: unset;
   }
   .footer-rows div:nth-of-type(4) p:last-of-type {
+    margin-top: 10px;
     display: block;
     font-weight: bold;
-    padding-bottom: 33px;
+  }
+  .footer-rows div:nth-of-type(4) .socials {
+    margin-top: 30px;
+  }
+  .footer-rows div:nth-of-type(4) small {
+    margin-top: 20px;
+  }
+  .footer-rows .for-mobile {
+    display: none;
   }
 }
 @media (max-width: 768px) {
   .footer-rows {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 69px 20px 20px;
+    padding: 110px 6.25% 20px 6.25%;
   }
 
   .row:nth-of-type(1) {
@@ -850,19 +901,59 @@ footer {
 
   .footer-rows div:nth-of-type(4) p:first-of-type {
     display: block;
+    font-size: 18px;
   }
-
-  .row:nth-of-type(4) p {
-    padding-bottom: 20px;
+  .footer-rows div:nth-of-type(4) small {
+    text-align: left;
+    font-size: 11px;
   }
 
   .footer-rows div:nth-of-type(4) p:nth-of-type(4) {
     padding-bottom: 20px;
   }
 
+  .row:nth-of-type(4) p {
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  .footer-rows div:nth-of-type(4) p:nth-of-type(2) {
+    font-size: 12px;
+  }
+
+  .footer-rows div:nth-of-type(4) p:nth-of-type(3) {
+    margin-top: unset;
+    font-size: 12px;
+  }
+
+  .footer-rows div:nth-of-type(4) p:nth-of-type(4) {
+    margin-top: unset;
+    font-size: 12px;
+  }
+
+  .footer-rows div:nth-of-type(4) p:last-of-type {
+    margin-top: unset;
+    font-size: 14px;
+  }
+
   .socials img {
     margin-left: 0;
     margin-right: 30px;
+  }
+
+  .footer-rows div:nth-of-type(4) .socials {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .footer-rows div:nth-of-type(4) small:nth-of-type(2) {
+    margin-top: 10px;
+  }
+
+  .for-mobile {
+    display: inline !important;
+    margin-top: 20px !important;
+    text-align: left !important;
   }
 }
 .play-button {
