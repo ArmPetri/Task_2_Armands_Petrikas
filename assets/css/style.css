@@ -465,7 +465,7 @@ h3 {
   width: 100%;
   height: auto;
   min-height: 120px;
-  background: url(/assets/img/header\ background.png);
+  background: url(../../assets/img/header\ background.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 45px 0 45px;
@@ -651,7 +651,7 @@ h3 {
   }
 }
 footer {
-  background: url(/assets/img/footer\ background.png);
+  background: url(../../assets/img/footer\ background.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -2636,7 +2636,7 @@ main .hero-image {
 }
 
 .map {
-  background: url(/assets/img/map\ background.png);
+  background: url(./assets/img/map\ background.png);
   height: 648px;
   width: 100%;
   background-color: green;
