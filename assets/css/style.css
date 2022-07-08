@@ -465,7 +465,7 @@ h3 {
   width: 100%;
   height: auto;
   min-height: 120px;
-  background: url(../../../assets/img/header\ background.png);
+  background: url(/assets/img/header\ background.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 45px 0 45px;
@@ -651,7 +651,7 @@ h3 {
   }
 }
 footer {
-  background: url(../../../assets/img/footer\ background.png);
+  background: url(/assets/img/footer\ background.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -2648,6 +2648,26 @@ main .hero-image {
 .select {
   width: 288px;
   height: 100%;
+}
+
+.iedvesmas-stasti {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 82px 0 50px;
+}
+.iedvesmas-stasti .top {
+  width: 810px;
+  margin: auto;
+}
+.iedvesmas-stasti h1 {
+  margin-top: 4px;
+  margin-bottom: 63px;
+  text-align: center;
+}
+.iedvesmas-stasti .Text2 {
+  text-align: center;
+  margin-top: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

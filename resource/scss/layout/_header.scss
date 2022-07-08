@@ -5,7 +5,7 @@
 
 .header {
   @include mix.size($min-height: 120px);
-  @include mix.background($background: url(../../../assets/img/header\ background.png));
+  @include mix.background($background: url(/assets/img/header\ background.png));
   @include mix.padding($right: 45px, $left: 45px);
   @include mix.flex($justify: space-between, $align: center);
   z-index: 3;
