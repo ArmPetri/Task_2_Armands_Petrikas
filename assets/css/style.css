@@ -2636,7 +2636,7 @@ main .hero-image {
 }
 
 .map {
-  background: url(./assets/img/map\ background.png);
+  background: url(../../assets/img/map\ background.png);
   height: 648px;
   width: 100%;
   background-color: green;
