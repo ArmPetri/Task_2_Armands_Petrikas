@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/Favicon_medium.png">
   <link rel="icon" type="image/png"  sizes="96x96" href="./assets/img/Favicon_large.png">
   <title>Home</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 <body>
   <header class="header">
@@ -51,7 +52,7 @@
     </section>
 
     <section class="location">
-      <div class="select js-hybridSelect">
+      <div class="select js-hybridSelect business-location">
         <p class="Text2">Uzņemuma atrašanas vieta</p>
 
         <div class="selectWrapper">
@@ -60,7 +61,6 @@
             <option value="Rīga">Rīga</option>
             <option value="Jelgava">Jelgava</option>
             <option value="Ogre">Ogre</option>
-            <div></div>
           </select>
 
           <div class="selectCustom js-selectCustom" aria-hidden="true">
@@ -76,14 +76,16 @@
       </div>
 
 
-      <div class="select js-hybridSelect">
+      <div class="select js-hybridSelect business-filter">
         <p class="Text2">Uzņēmuma veids</p>
 
         <div class="selectWrapper">
           <select class="selectNative js-selectNative" name="Izvēlies"  aria-labelledby="jobLabel">
             <option value="Izvēlies" disabled="" selected="">Izvēlies</option>
             <option value="Ēdināšana">Ēdināšana</option>
-            <div></div>
+            <option value="Skaistumkopšana">Skaistumkopšana</option>
+            <option value="Fitness">Fitness</option>
+
           </select>
 
           <div class="selectCustom js-selectCustom" aria-hidden="true">
@@ -91,7 +93,8 @@
             
             <div class="selectCustom-options">
               <div class="selectCustom-option" data-value="Ēdināšana">Ēdināšana</div>
-
+              <div class="selectCustom-option" data-value="Skaistumkopšana">Skaistumkopšana</div>
+              <div class="selectCustom-option" data-value="Fitness">Fitness</div>
             </div>
           </div>
         </div>
@@ -99,7 +102,7 @@
 
     </section>
 
-    <section class="map">
+    <section id="map" class="map">
     </section>  
   </main>
   <button id="scrollUpButton" class="scroll_up"><img class="scroll_arrow" src="./assets/img/Arrow.svg" alt="here"></button>
@@ -140,7 +143,14 @@
       </div>
     </div>
   </footer>
-  </footer>
-  <script src="assets/js/theme.js"></script>
+</footer>
+<script src="assets/js/theme.js"></script>
+  <!-- <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDewQJwm2J3j7rPB91xkCLgQTbTCP8MOJw&callback=initMap&v=weekly"
+  defer
+  ></script> -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDewQJwm2J3j7rPB91xkCLgQTbTCP8MOJw&callback=initMap">
+</script>
 </body>
 </html>
