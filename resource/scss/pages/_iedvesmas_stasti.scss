@@ -1,11 +1,13 @@
+@use '../base/colors';
+@use '../util/fonts';
+
 .iedvesmas-stasti  {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 82px 0 50px;
+  padding: 82px 0 150px;
 
   .top {
-    width: 810px;
     margin: auto;
   }
 
@@ -25,18 +27,323 @@
     display: grid;
     width: 100%;
     height: auto;
-    margin: 151px auto 0;
+    margin: 151px auto 146px;
     text-align: center;
     justify-content: center;
-    grid-template-columns: 160px 160px 160px 160px 160px 160px;
-    grid-template-rows: 160px 160px 160px 160px 160px 160px; 
-    column-gap: 14px;
-    row-gap: 14px;
   }
 
   .eachVideo {
     width: 160px;
     height: 160px;
-    background:url(../../assets/img/image-grid-background.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .image, .image2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .img-overlay {
+      position: absolute;
+      left: 0;
+      top: 0%;
+      width: 100%;
+      height: 100%;
+      background: url(../../assets/img/image-grid-overlay.png);
+      opacity: 0.8;
+      z-index: -1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover .img-overlay {
+     opacity: 1; 
+    }
+
+    .name, .name2 {
+      color: white;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .name2 {
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.4px;
+    }
+
+    .image-num {
+      position: absolute;
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      color: #FFFFFF;
+      line-height: 53px;
+      bottom: -5px;
+      right: 14px;
+    }
+  }
+
+  .eachVideo:hover .image {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+
+  .eachVideo:hover .name, .eachVideo:hover .name2 {
+    opacity: 1;
+  }
+
+  .video-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47, 72, 88, 0.9);
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6.25%;
+    z-index: 4;
+
+    .name-in-video {
+      font-size: 36px;
+      color: #FFFFFF;
+      line-height: 53px;
+      margin-bottom: -29px;
+    }
+  }
+
+  .close-button {
+    width: 23px;
+    height: 23px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-right: 74px;
+    margin-bottom: 33px;
+    margin-top: 20px;
+  }
+
+  .video-tag {
+    max-width: 912px;
+    max-height: 511px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: -9px;
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 21px;
+    }
+
+    .Text2 {
+      width: 606px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      margin-bottom: 62px;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 83px;
+    }
+    
+    .team-member {
+      position: relative;
+      width: 289px;
+      height: 365px;
+      overflow: hidden;
+      
+      .text-overlay {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        bottom: -50%;
+        left: 0;
+        transform: rotate(-180deg);
+        opacity:0;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+     
+        h3 {
+          color: white;
+          transform: rotate(-180deg);
+          font-family: fonts.$OswaldL;
+          font-size: 24px;
+          margin-left: 10px;
+          font-weight: 200;
+          letter-spacing: 0.8px;
+          text-align: center;
+        }
+
+        .Text2 {
+          width: inherit;
+          color: white;
+          transform: rotate(-180deg);
+          margin-top: 18px;
+          margin-bottom: 0px;
+          padding: 0 6.25%
+        }
+      }
+    }
+      .team-member:hover .text-overlay {
+        opacity: 1;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(47, 72, 88, 0.8) 18.63%, rgba(47, 72, 88, 0) 49.21%);
+      }
   }
 }
+
+.overlay-body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 1201px) {
+  .iedvesmas-stasti {   
+    .top {
+    width: 810px;
+    }
+    
+    .container {
+      grid-template-columns: 160px 160px 160px 160px 160px 160px;
+      grid-template-rows: 160px 160px 160px 160px 160px 160px; 
+      column-gap: 14px;
+      row-gap: 14px;
+    }
+
+    .play-button {
+      top: 54%;
+      margin-top: 29px;
+      max-width: 123px 
+    }
+
+    .name-in-video {
+      font-size: 36px;
+      color: #FFFFFF;
+      line-height: 53px;
+      margin-bottom: -29px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .iedvesmas-stasti  {
+    padding: 82px 0 0px;
+
+    .top {
+      margin: 0 6.25%;
+    }
+
+    .container {
+      grid-template-columns: 143px 143px 143px 143px;
+      grid-template-rows: 143px 143px 143px 143px; 
+      column-gap: 12px;
+      row-gap: 12px;
+      margin: 80px auto 80px;
+
+    .eachVideo {
+        width: 143px;
+        height: 143px;
+        }
+      }
+
+      .team {
+        margin: 30px 6.25% 150px;
+       
+        .team-members {
+          justify-content: center;
+          align-items: center;
+        }
+
+        .Text2 {
+          flex-wrap: wrap;
+          width: 100%;
+        }
+      }
+      
+      .close-button {
+        margin-right: 0;
+      }
+
+      .play-button {
+        max-width: 86px;
+        width: 86px;
+      }
+  
+    
+    }
+  }
+
+@media (max-width: 768px) {
+  .iedvesmas-stasti  {
+    padding: 50px 0 0;
+
+    .top {
+      margin: 0 6.25%;
+
+    }
+
+    .container {
+      grid-template-columns: 134px 134px;
+      grid-template-rows: 134px 134px; 
+      column-gap: 12px;
+      row-gap: 12px;
+
+      .eachVideo {
+        width: 134px;
+        height: 134px;
+      }
+    }
+
+    .team {
+      margin: 0 6.25% 120px;
+
+      .team .Text2 {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 80px;
+      }
+    }
+
+    .close-button {
+      width: 15px;
+      height: 15px;
+    }  
+
+    .play-button {
+      max-width: 50px;
+      width: 50px;
+      margin-top: 0;
+      top: 50%;
+    }
+
+    .name-in-video {
+      font-size: 24px;
+    }
+  }
+}
+

@@ -360,6 +360,10 @@ template {
   font-family: "Oswald";
   src: url("../../assets/font/Oswald/static/Oswald-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Oswald-Light";
+  src: url("../../assets/font/Oswald/static/Oswald-Light.ttf") format("truetype");
+}
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -2705,10 +2709,9 @@ main .hero-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 82px 0 50px;
+  padding: 82px 0 150px;
 }
 .iedvesmas-stasti .top {
-  width: 810px;
   margin: auto;
 }
 .iedvesmas-stasti h1 {
@@ -2725,18 +2728,275 @@ main .hero-image {
   display: grid;
   width: 100%;
   height: auto;
-  margin: 151px auto 0;
+  margin: 151px auto 146px;
   text-align: center;
   justify-content: center;
-  grid-template-columns: 160px 160px 160px 160px 160px 160px;
-  grid-template-rows: 160px 160px 160px 160px 160px 160px;
-  column-gap: 14px;
-  row-gap: 14px;
 }
 .iedvesmas-stasti .eachVideo {
   width: 160px;
   height: 160px;
-  background: url(../../assets/img/image-grid-background.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.iedvesmas-stasti .eachVideo .image, .iedvesmas-stasti .eachVideo .image2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  transition: all 0.3s ease-in-out;
+}
+.iedvesmas-stasti .eachVideo .img-overlay {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/img/image-grid-overlay.png);
+  opacity: 0.8;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.iedvesmas-stasti .eachVideo:hover .img-overlay {
+  opacity: 1;
+}
+.iedvesmas-stasti .eachVideo .name, .iedvesmas-stasti .eachVideo .name2 {
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.iedvesmas-stasti .eachVideo .name2 {
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.4px;
+}
+.iedvesmas-stasti .eachVideo .image-num {
+  position: absolute;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 53px;
+  bottom: -5px;
+  right: 14px;
+}
+.iedvesmas-stasti .eachVideo:hover .image {
+  transform: scale(1.1);
+  opacity: 0;
+}
+.iedvesmas-stasti .eachVideo:hover .name, .iedvesmas-stasti .eachVideo:hover .name2 {
+  opacity: 1;
+}
+.iedvesmas-stasti .video-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 72, 88, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6.25%;
+  z-index: 4;
+}
+.iedvesmas-stasti .video-overlay .name-in-video {
+  font-size: 36px;
+  color: #FFFFFF;
+  line-height: 53px;
+  margin-bottom: -29px;
+}
+.iedvesmas-stasti .close-button {
+  width: 23px;
+  height: 23px;
+  justify-self: flex-end;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 74px;
+  margin-bottom: 33px;
+  margin-top: 20px;
+}
+.iedvesmas-stasti .video-tag {
+  max-width: 912px;
+  max-height: 511px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: -9px;
+}
+.iedvesmas-stasti .team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iedvesmas-stasti .team h2 {
+  margin-bottom: 21px;
+}
+.iedvesmas-stasti .team .Text2 {
+  width: 606px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin-bottom: 62px;
+}
+.iedvesmas-stasti .team .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 83px;
+}
+.iedvesmas-stasti .team .team-member {
+  position: relative;
+  width: 289px;
+  height: 365px;
+  overflow: hidden;
+}
+.iedvesmas-stasti .team .team-member .text-overlay {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  bottom: -50%;
+  left: 0;
+  transform: rotate(-180deg);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.iedvesmas-stasti .team .team-member .text-overlay h3 {
+  color: white;
+  transform: rotate(-180deg);
+  font-family: "Oswald-Light", sans-serif;
+  font-size: 24px;
+  margin-left: 10px;
+  font-weight: 200;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+.iedvesmas-stasti .team .team-member .text-overlay .Text2 {
+  width: inherit;
+  color: white;
+  transform: rotate(-180deg);
+  margin-top: 18px;
+  margin-bottom: 0px;
+  padding: 0 6.25%;
+}
+.iedvesmas-stasti .team .team-member:hover .text-overlay {
+  opacity: 1;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(47, 72, 88, 0.8) 18.63%, rgba(47, 72, 88, 0) 49.21%);
+}
+
+.overlay-body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 1201px) {
+  .iedvesmas-stasti .top {
+    width: 810px;
+  }
+  .iedvesmas-stasti .container {
+    grid-template-columns: 160px 160px 160px 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px 160px 160px 160px;
+    column-gap: 14px;
+    row-gap: 14px;
+  }
+  .iedvesmas-stasti .play-button {
+    top: 54%;
+    margin-top: 29px;
+    max-width: 123px;
+  }
+  .iedvesmas-stasti .name-in-video {
+    font-size: 36px;
+    color: #FFFFFF;
+    line-height: 53px;
+    margin-bottom: -29px;
+  }
+}
+@media (max-width: 1200px) {
+  .iedvesmas-stasti {
+    padding: 82px 0 0px;
+  }
+  .iedvesmas-stasti .top {
+    margin: 0 6.25%;
+  }
+  .iedvesmas-stasti .container {
+    grid-template-columns: 143px 143px 143px 143px;
+    grid-template-rows: 143px 143px 143px 143px;
+    column-gap: 12px;
+    row-gap: 12px;
+    margin: 80px auto 80px;
+  }
+  .iedvesmas-stasti .container .eachVideo {
+    width: 143px;
+    height: 143px;
+  }
+  .iedvesmas-stasti .team {
+    margin: 30px 6.25% 150px;
+  }
+  .iedvesmas-stasti .team .team-members {
+    justify-content: center;
+    align-items: center;
+  }
+  .iedvesmas-stasti .team .Text2 {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .iedvesmas-stasti .close-button {
+    margin-right: 0;
+  }
+  .iedvesmas-stasti .play-button {
+    max-width: 86px;
+    width: 86px;
+  }
+}
+@media (max-width: 768px) {
+  .iedvesmas-stasti {
+    padding: 50px 0 0;
+  }
+  .iedvesmas-stasti .top {
+    margin: 0 6.25%;
+  }
+  .iedvesmas-stasti .container {
+    grid-template-columns: 134px 134px;
+    grid-template-rows: 134px 134px;
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+  .iedvesmas-stasti .container .eachVideo {
+    width: 134px;
+    height: 134px;
+  }
+  .iedvesmas-stasti .team {
+    margin: 0 6.25% 120px;
+  }
+  .iedvesmas-stasti .team .team .Text2 {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .iedvesmas-stasti .close-button {
+    width: 15px;
+    height: 15px;
+  }
+  .iedvesmas-stasti .play-button {
+    max-width: 50px;
+    width: 50px;
+    margin-top: 0;
+    top: 50%;
+  }
+  .iedvesmas-stasti .name-in-video {
+    font-size: 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

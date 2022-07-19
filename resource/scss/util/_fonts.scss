@@ -14,8 +14,13 @@
   font-family: 'Oswald';
   src: url('../../assets/font/Oswald/static/Oswald-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: 'Oswald-Light';
+  src: url('../../assets/font/Oswald/static/Oswald-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 
 $Montserrat: 'Montserrat-Regular', sans-serif;
 $MontserratM: 'Montserrat-Medium', sans-serif;
 $MontserratB: 'Montserrat-Bold', sans-serif;
 $Oswald: 'Oswald', sans-serif;
+$OswaldL: 'Oswald-Light', sans-serif;
