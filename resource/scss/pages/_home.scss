@@ -1,6 +1,7 @@
 @use '../base/colors';
 @use '../util/fonts';
 @use '../util/mixins' as mix;
+@use '../components';
 
 main {
   // display: flex;
@@ -732,3 +733,4 @@ main {
     }
   } 
 }
+

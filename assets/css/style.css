@@ -975,6 +975,105 @@ footer {
   transition: all 0.1s ease-in-out;
 }
 
+.consent-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 46px;
+  background-color: #353535;
+  color: white;
+  transition: opacity 1s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 818px;
+  height: 93.74px;
+  border-radius: 8px 8px 0 0;
+  margin: 0 auto;
+  background-color: #2F4858;
+  z-index: 4;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+.consent-popup p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  width: 376px;
+}
+.consent-popup a {
+  font-weight: bolder;
+  color: white;
+}
+.consent-popup .send {
+  background-color: #FFA800;
+  width: 131px;
+  height: 34px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 3px;
+}
+.consent-popup .send:first-of-type {
+  margin-right: 28px;
+}
+.consent-popup .send:last-of-type {
+  background-color: #FFFFFF;
+  color: #2F4858;
+}
+.consent-popup .send:last-of-type:hover {
+  background-color: #FFA800;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .consent-popup {
+    height: 130px;
+    width: 60%;
+    padding: 0 6.25%;
+  }
+  .consent-popup p {
+    margin-right: 20px;
+  }
+  .consent-popup .cookie-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .consent-popup .send:first-of-type {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .consent-popup {
+    width: 80%;
+    height: auto;
+    padding: 20px 6.25%;
+  }
+  .consent-popup p {
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 567px) {
+  .consent-popup {
+    flex-direction: column;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -2640,7 +2739,6 @@ main .hero-image {
 
 #map {
   height: 100%;
-  /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
   height: 648px;
@@ -3031,7 +3129,7 @@ main .hero-image {
   margin-top: -22px;
   text-align: center;
 }
-.status .top .send {
+.status .top .status-button {
   width: 233px;
   height: 50px;
   background: white;
