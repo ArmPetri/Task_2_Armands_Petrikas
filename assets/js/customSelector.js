@@ -8,6 +8,7 @@ function hybridSoloInit(elSelect) {
   const customOptsList = Array.from(elSelectCustomOpts.children);
   const optionsCount = customOptsList.length;
   const defaultLabel = elSelectCustomBox.getAttribute("data-value");
+  const screenWidth = window.innerWidth
 
   let optionChecked = "";
   let optionHoveredIndex = -1;
@@ -18,8 +19,18 @@ function hybridSoloInit(elSelect) {
 
     if (isClosed) {
       openSelectCustom();
+      if(screenWidth > 768) {
+        document.querySelector('.location').style.marginBottom = "80px";
+      } else {
+        elSelect.style.marginBottom = "80px";
+      }
     } else {
       closeSelectCustom();
+      if(screenWidth > 768) {
+        document.querySelector('.location').style.marginBottom = "0";
+      } else {
+        elSelect.style.marginBottom = "0";
+      }
     }
   });
 

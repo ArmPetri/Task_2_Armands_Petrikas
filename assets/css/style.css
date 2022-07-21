@@ -1772,7 +1772,7 @@ main .hero-image {
   line-height: 36px;
 }
 
-.ken {
+.reviews {
   position: relative;
   padding: 150px 0 155px;
   z-index: 10;
@@ -1782,18 +1782,19 @@ main .hero-image {
   justify-content: center;
   align-items: center;
 }
-.ken .text-wrapper {
+.reviews .text-wrapper {
   margin-left: -16px;
   margin-top: 1px;
+  width: 602px;
 }
-.ken h3 {
+.reviews h3 {
   line-height: 36px;
 }
-.ken .Text2 {
+.reviews .Text2 {
   line-height: 22px;
   margin-top: 10px;
 }
-.ken .Text1 {
+.reviews .Text1 {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
@@ -1801,12 +1802,22 @@ main .hero-image {
   font-style: italic;
   letter-spacing: 0.18px;
 }
-.ken .arrows {
+.reviews .arrows {
+  width: 602px;
   display: flex;
   margin-top: 30px;
 }
-.ken .arrow-right {
+.reviews .arrow-right, .reviews .arrow-left {
+  cursor: pointer;
+}
+.reviews .arrow-right:hover, .reviews .arrow-left:hover {
+  opacity: 0.7;
+}
+.reviews .arrow-right {
   margin-left: 45px;
+}
+.reviews .arrow-left {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 1201px) {
@@ -1849,16 +1860,16 @@ main .hero-image {
     height: 476px;
   }
 
-  .ken .text-wrapper {
+  .reviews .text-wrapper {
     margin: 0 6.25%;
   }
-  .ken h3 {
+  .reviews h3 {
     font-size: 18px;
   }
-  .ken .Text2 {
+  .reviews .Text2 {
     font-size: 14px;
   }
-  .ken .Text1 {
+  .reviews .Text1 {
     font-size: 12px;
   }
 }
@@ -2337,7 +2348,6 @@ main .hero-image {
   align-self: center;
 }
 .uznemejiem .contact {
-  z-index: 5;
   margin: 155px auto 100px;
 }
 .uznemejiem .contact h2 {
@@ -2811,7 +2821,7 @@ main .hero-image {
 }
 
 .margin {
-  margin: 263px 0 -40px;
+  margin: 183px 0 -40px;
 }
 
 #map {
@@ -2820,6 +2830,28 @@ main .hero-image {
   position: relative;
   bottom: -101px;
   margin-bottom: 17px;
+}
+
+.gm-bundled-control-on-bottom {
+  bottom: 215px !important;
+  right: 110px !important;
+}
+
+.gmnoprint {
+  color: transparent;
+}
+.gmnoprint div {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.gmnoprint div .gm-control-active {
+  background: rgba(255, 168, 0, 0.5) !important;
+  border-radius: 14px;
+  width: 56.82px !important;
+  height: 57.14px !important;
+}
+.gmnoprint div .gm-control-active:first-of-type {
+  margin-bottom: 20px !important;
 }
 
 .select {
@@ -2910,7 +2942,7 @@ main .hero-image {
     width: 280px;
   }
   .select:last-of-type {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .select .selectCustom-trigger {
     width: 280px;
@@ -2921,12 +2953,16 @@ main .hero-image {
     height: 41.35px;
   }
 
+  .filteredBusiness {
+    display: none;
+  }
   .filteredBusiness p {
     margin-left: 10px;
   }
 
   #map {
     height: 606px;
+    margin-bottom: -10px;
   }
 }
 .iedvesmas-stasti {

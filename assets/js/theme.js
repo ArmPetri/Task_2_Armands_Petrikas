@@ -112,7 +112,6 @@ document.querySelector('#decline').addEventListener('click', () => {
 
 // Initialize and add the map
 function initMap(sel) {
-// console.log(sel)
 
   let markers = [
     {
@@ -391,9 +390,13 @@ if(whichFilter.length !== 0 && whichCity.length !== 0){
     marker.setIcon(orangeMarker)
     });
   }
+
 }
 
 
 window.initMap = initMap;
 
+const mapControls = document.querySelectorAll('.gm-control-active')
+
+console.log(Array.from(mapControls))
 

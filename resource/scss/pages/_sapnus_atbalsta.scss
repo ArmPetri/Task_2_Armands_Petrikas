@@ -209,7 +209,8 @@
 }
 
 .margin {
-  margin: 263px 0 -40px;
+  // margin: 263px 0 -40px;
+  margin: 183px 0 -40px;
 }
 
 #map {
@@ -218,6 +219,31 @@
   position: relative;
   bottom: -101px;
   margin-bottom: 17px;
+}
+
+.gm-bundled-control-on-bottom {
+    bottom: 215px !important;
+    right: 110px !important;
+}
+
+.gmnoprint  {
+  color: transparent;
+  
+  div {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    
+    .gm-control-active {
+      background: rgba(255, 168, 0, 0.5) !important;
+      border-radius: 14px;
+      width: 56.82px !important;
+      height: 57.14px !important;
+      
+      &:first-of-type {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
 }
 
 .select {
@@ -313,7 +339,7 @@
     width: 280px;
 
    &:last-of-type {
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     .selectCustom-trigger {
@@ -328,6 +354,8 @@
   }
 
   .filteredBusiness {
+    display: none;
+
     p {
       margin-left: 10px;
     }
@@ -335,5 +363,6 @@
 
   #map {
     height: 606px;
+    margin-bottom: -10px;
   }
 }

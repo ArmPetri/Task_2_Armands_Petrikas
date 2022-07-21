@@ -108,7 +108,7 @@ for(i = 0; i < videoArray.length; i++) {
 
     let videoTag = document.createElement('VIDEO')
     videoTag.setAttribute('class', 'video-tag')
-    videoTag.poster = "../../assets/img/video-poster.png";
+    videoTag.poster = "./assets/img/video-poster.png";
     videoTag.setAttribute("width", "912");
     videoTag.setAttribute("height", "511");
 
@@ -140,7 +140,7 @@ for(i = 0; i < videoArray.length; i++) {
 
     })
   } else if (videoArray[i] === undefined) {
-    img.src = "../../assets/img/image-grid-background.png";
+    img.src = "./assets/img/image-grid-background.png";
     img.setAttribute('class', 'image2')
 
     imageOverlay.opacity = 1;
