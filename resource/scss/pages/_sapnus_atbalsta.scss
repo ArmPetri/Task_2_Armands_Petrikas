@@ -137,7 +137,7 @@
   
   .selectCustom-option.isHover,
   .selectCustom-option:hover {
-    background-color: colors.$orange; // contrast AA
+    background-color: colors.$orange; 
     color: white;
     cursor: default;
   }
@@ -326,6 +326,12 @@
       height: 41.35px;
     }
   }
+
+  .filteredBusiness {
+    p {
+      margin-left: 10px;
+    }
+    }
 
   #map {
     height: 606px;

@@ -3,12 +3,17 @@
 @use '../util/mixins' as mix;
 @use '../base/breakpoints' as breakpoints;
 
-.header {
-  @include mix.size($min-height: 120px);
+#header-background {
   @include mix.background($background: url(../../assets/img/header\ background.png));
+}
+
+.header {
+  // @include mix.size($min-height: 120px);
+  height: 120px;
   @include mix.padding($right: 45px, $left: 45px);
   @include mix.flex($justify: space-between, $align: center);
   z-index: 3;
+  position: relative;
   
   .logo {
     @include mix.position($position: absolute, $top: -15px, $left: 62px);
@@ -108,9 +113,32 @@
   
 
   // Media Queries 
-@media (min-width: breakpoints.$large){
+@media (min-width: 1367px){
   .header {
-    @include mix.size($min-height: 120px);
+    height: 160px;
+    @include mix.flex($justify: space-between, $align: flex-end);
+  }
+  .nav {
+    @include mix.flex($justify: space-between, $align: flex-end);
+    width: 100%;
+    height: 45px;
+    padding-bottom: 8px;
+    margin-left: 258px;
+  }
+
+  .mobile-nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+  }
+}
+  
+@media (min-width: breakpoints.$large) and (max-width: 1366px){
+  .header {
+    @include mix.size($height: 120px,$min-height: 120px);
+    @include mix.flex($justify: space-between, $align: flex-end);
   }
 
   .nav {
@@ -133,7 +161,7 @@
 @media (max-width: breakpoints.$medium){
   .header {
     @include mix.flex($justify: space-between);
-    @include mix.size($min-height: 96px);
+    @include mix.size($height: 96px, $min-height: 96px);
     padding: 80px;
   }
 
@@ -147,8 +175,6 @@
     height: 107px;
     z-index: 6;
   }
-
-
 
   .nav {
     display: none;

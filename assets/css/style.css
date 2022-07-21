@@ -465,19 +465,21 @@ h3 {
     line-height: 14.63px;
   }
 }
-.header {
-  width: 100%;
-  height: auto;
-  min-height: 120px;
+#header-background {
   background: url(../../assets/img/header\ background.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.header {
+  height: 120px;
   padding: 0 45px 0 45px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   z-index: 3;
+  position: relative;
 }
 .header .logo {
   position: absolute;
@@ -570,11 +572,40 @@ h3 {
   top: 0;
   left: 0;
 }
-@media (min-width: 1201px) {
+@media (min-width: 1367px) {
+  .header .header {
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 45px;
+    padding-bottom: 8px;
+    margin-left: 258px;
+  }
+  .header .mobile-nav {
+    display: none;
+  }
+  .header .hamburger {
+    display: none;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1366px) {
   .header .header {
     width: 100%;
-    height: auto;
+    height: 120px;
     min-height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   .header .nav {
     display: flex;
@@ -600,7 +631,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 96px;
     min-height: 96px;
     padding: 80px;
   }
@@ -663,6 +694,7 @@ footer {
   min-height: 376px;
   padding-top: 70px 82px 20px 82px;
   display: flex;
+  position: relative;
 }
 
 .footer-rows {
@@ -1086,7 +1118,6 @@ main .hero {
   min-height: 0;
   width: 100%;
   height: auto;
-  z-index: -1;
   position: relative;
 }
 main .hero .play-button {
@@ -1499,7 +1530,7 @@ main .hero-image {
     max-height: 722px;
     margin-top: -39px;
     width: 100%;
-    top: 1rem;
+    top: 0;
     background-size: cover;
   }
   .hero .play-button {
@@ -2308,7 +2339,6 @@ main .hero-image {
 .uznemejiem .contact {
   z-index: 5;
   margin: 155px auto 100px;
-  z-index: -1;
 }
 .uznemejiem .contact h2 {
   margin-bottom: 59px;
@@ -2492,7 +2522,7 @@ main .hero-image {
 }
 
 .sapnu-banka .call-to-action {
-  padding: 154px 174px 102px;
+  padding: 154px 174px 150px;
 }
 
 @media (min-width: 1201px) {
@@ -2889,6 +2919,10 @@ main .hero-image {
   .select .selectCustom, .select .selectNative {
     width: 280px;
     height: 41.35px;
+  }
+
+  .filteredBusiness p {
+    margin-left: 10px;
   }
 
   #map {

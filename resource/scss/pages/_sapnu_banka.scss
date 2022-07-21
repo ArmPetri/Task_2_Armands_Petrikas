@@ -4,13 +4,10 @@
 .sapnu-banka .hero {
   margin-bottom: 47.4px;
 
-  // .hero {
-
     .play-button:hover {
         opacity: 0.9;
           transition: all 0.1s ease-in-out;
     }
-  // }
 }
 
 .sapnu-banka .top, .sapnu-banka .hero {
@@ -24,8 +21,6 @@
     line-height: 71px;
   }
 }
-
-
 
 .goal-mission {
   display: flex;
@@ -138,7 +133,7 @@
 }
 
 .sapnu-banka .call-to-action  {
-  padding: 154px 174px 102px;
+  padding: 154px 174px 150px;
 }
 
 // Media Queries 
