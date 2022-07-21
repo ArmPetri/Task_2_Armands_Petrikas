@@ -2374,15 +2374,19 @@ main .hero-image {
     height: 150px;
   }
 }
-.sapnu-banka {
+.sapnu-banka .hero {
   margin-bottom: 47.4px;
+}
+.sapnu-banka .hero .play-button:hover {
+  opacity: 0.9;
+  transition: all 0.1s ease-in-out;
 }
 
 .sapnu-banka .top, .sapnu-banka .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 86px 0 -7px;
+  margin: 86px auto -7px;
 }
 .sapnu-banka .top h1, .sapnu-banka .hero h1 {
   text-align: center;
@@ -2609,10 +2613,6 @@ main .hero-image {
   justify-content: center;
   padding: 82px 0 50px;
 }
-.sapnus-atbalsta .top {
-  width: 810px;
-  margin: auto;
-}
 .sapnus-atbalsta h1 {
   margin-top: 4px;
   margin-bottom: 63px;
@@ -2634,6 +2634,9 @@ main .hero-image {
 }
 .location .Text2 {
   text-align: left;
+}
+.location .js-hybridSelect .Text2 {
+  color: #FFA800;
 }
 .location .selectNative,
 .location .selectCustom {
@@ -2695,6 +2698,7 @@ main .hero-image {
   border-radius: 0 0 6px 6px;
   background: rgba(196, 196, 196, 0.4);
   z-index: 1;
+  z-index: 5;
   display: none;
 }
 .location .selectCustom.isActive .selectCustom-options {
@@ -2737,10 +2741,50 @@ main .hero-image {
   font-family: "Montserrat-Bold", sans-serif;
 }
 
-#map {
-  height: 100%;
+.filteredBusiness {
   width: 100%;
-  /* The width is the width of the web page */
+  height: auto;
+}
+.filteredBusiness .result-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 33px;
+}
+.filteredBusiness .result-div:last-of-type {
+  margin-bottom: 0;
+}
+.filteredBusiness .result-div:last-of-type .Text1 {
+  margin-top: 3px;
+}
+.filteredBusiness .result-div:last-of-type .Text2 {
+  margin-top: 3px;
+}
+.filteredBusiness .result-img {
+  width: 120px;
+  height: auto;
+}
+.filteredBusiness .Text1 {
+  width: 32%;
+  margin-top: 20px;
+}
+.filteredBusiness .Text1:last-of-type {
+  margin-top: 3px;
+}
+.filteredBusiness .Text2 {
+  width: 30%;
+  text-align: end;
+  margin-top: 20px;
+}
+.filteredBusiness .Text2:last-of-type {
+  margin-top: 3px;
+}
+
+.margin {
+  margin: 263px 0 -40px;
+}
+
+#map {
   height: 648px;
   width: 100%;
   position: relative;
@@ -2803,6 +2847,54 @@ main .hero-image {
   text-align: end !important;
 }
 
+@media (min-width: 1201px) {
+  .top {
+    width: 810px;
+    margin: auto;
+  }
+
+  .filteredBusiness {
+    padding: 0 270px;
+  }
+}
+@media (max-width: 1200px) {
+  .sapnus-atbalsta .top {
+    margin: 0 6.25%;
+  }
+
+  .filteredBusiness {
+    padding: 0 6.25%;
+  }
+
+  #map {
+    height: 812px;
+  }
+}
+@media (max-width: 768px) {
+  .location {
+    flex-direction: column;
+    margin: 90px 0 80px;
+  }
+
+  .select {
+    width: 280px;
+  }
+  .select:last-of-type {
+    margin-top: 40px;
+  }
+  .select .selectCustom-trigger {
+    width: 280px;
+    height: 41.35px;
+  }
+  .select .selectCustom, .select .selectNative {
+    width: 280px;
+    height: 41.35px;
+  }
+
+  #map {
+    height: 606px;
+  }
+}
 .iedvesmas-stasti {
   display: flex;
   flex-direction: column;

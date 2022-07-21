@@ -727,7 +727,9 @@ document.querySelector('#decline').addEventListener('click', () => {
 
 
 // Initialize and add the map
-function initMap() {
+function initMap(sel) {
+// console.log(sel)
+
   let markers = [
     {
       name: 'PURCH restaurant',
@@ -851,6 +853,79 @@ function initMap() {
       address: 'Jāņa Čakstes iela 31, Ogre'
     } 
   ]
+
+
+
+ 
+
+  const filterResult = () => document.querySelectorAll(".selectCustom-trigger")
+
+  const createFilteredResults = document.querySelector('.filteredBusiness')
+
+
+let arr = Array.from(filterResult())
+
+let whichCity = markers.filter((each) => {
+  return each.city === arr[0].innerText
+})
+
+let whichFilter = markers.filter((each) => {
+  return each.type === arr[1].innerText
+})
+
+let totalFilter;
+
+  if(whichCity.length === 0) {
+    totalFilter = markers.filter((each) => {
+          return each.city === "Rīga"
+  })
+}
+
+if (whichCity.length !== 0 && whichFilter.length !== 0) {
+   totalFilter = markers.filter((each) => {
+    return each.city === arr[0].innerText && each.type === arr[1].innerText
+  })
+} else if (whichCity.length !== 0 && whichFilter.length === 0) {
+  totalFilter = whichCity;
+} 
+
+if(whichFilter.length !== 0 && whichCity.length !== 0){
+  createFilteredResults.innerHTML = ""
+  createFilteredResults.classList.add('margin')
+
+  totalFilter.map((each) => {
+    
+    let resultDiv = document.createElement('div')
+    resultDiv.setAttribute('class', "result-div");
+    
+    let resultImg = document.createElement('img')
+    resultImg.setAttribute('class', "result-img");
+    resultImg.src = each.imgUrl
+    
+    let resultTitle = document.createElement('p')
+    resultTitle.setAttribute('class', "Text1");
+    resultTitle.innerHTML = each.name
+    
+    let resultText = document.createElement('p')
+    resultText.setAttribute('class', "Text2");
+    resultText.innerHTML = `${each.phone} <br /> ${each.address}`
+
+
+    resultDiv.append(resultImg)
+    resultDiv.append(resultTitle)
+    resultDiv.append(resultText)
+    createFilteredResults.append(resultDiv)
+  })
+}
+
+
+
+
+// (whichCity === [] && whichFilter !== [])
+
+// console.log(whichCity)
+// console.log(whichFilter)
+// console.log(totalFilter)
 // function initMap(selCity) {
 
   // let selections = Array.from(document.querySelectorAll('.selectCustom-trigger'));
@@ -877,15 +952,15 @@ function initMap() {
   // console.log(selected())
 
   // Original just to check which city 
-  // let selectedCity = () => {
-  //   if(selCity === "Jelgava") {
-  //     return { lat: 56.6511, lng: 23.7214 };
-  //   } else if (selCity === "Ogre") {
-  //     return { lat: 56.8147, lng: 24.6045 };
-  //   } else {
-  //     return { lat: 56.95014781446832, lng: 24.111373075886004 }; 
-  //   }
-  // } 
+  let selectedCity = () => {
+    if(arr[0].innerText === "Jelgava") {
+      return { lat: 56.6511, lng: 23.7214 };
+    } else if (arr[0].innerText === "Ogre") {
+      return { lat: 56.8147, lng: 24.6045 };
+    } else {
+      return { lat: 56.95014781446832, lng: 24.111373075886004 }; 
+    }
+  } 
 
   // console.log(selectedCity())
 
@@ -897,7 +972,7 @@ function initMap() {
     mapId: "503295174c71f663",
     center: { lat: 56.94, lng: 24.1 },
     // center: selected(),
-    // center: selectedCity(),
+    center: selectedCity(),
     // center: { lat: 56.8147, lng: 24.6045 },
     zoom: 13,
     mapTypeControl: false,
@@ -910,8 +985,10 @@ function initMap() {
   let allInfoWin = [];
   // let activeMarker = [];
 
-  for( let i =0; i < markers.length; i++) {
-    const currMarker = markers[i];
+  // for( let i =0; i < markers.length; i++) {
+  for( let i =0; i < totalFilter.length; i++) {
+    // const currMarker = markers[i];
+    const currMarker = totalFilter[i];
 
     let marker =  new google.maps.Marker({
       position: new google.maps.LatLng(currMarker.lat, currMarker.long),

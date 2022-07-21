@@ -7,11 +7,6 @@
   justify-content: center;
   padding: 82px 0 50px;
 
-  .top {
-    width: 810px;
-    margin: auto;
-  }
-
   h1 {
     margin-top: 4px;
     margin-bottom: 63px;
@@ -22,7 +17,6 @@
     text-align: center;
     margin-top: 2px;
   }
-
 }
 
 .location {
@@ -33,14 +27,15 @@
   justify-content: center;
   align-items: center;
   gap: 31px;
-  // position: relative;
 
   .Text2 {
     text-align: left;
   }
 
+  .js-hybridSelect .Text2 {
+    color: #FFA800;
+  }
 
-  // Both native and custom selects must have the same width/height.
   .selectNative,
   .selectCustom {
     position: absolute;
@@ -48,7 +43,6 @@
     height: 43px;
   }
 
-  // Make sure the custom select does not mess with the layout
   .selectCustom {
     position: absolute;
     top: 0;
@@ -57,16 +51,11 @@
     height: 43px;
   }
 
-    // This media query detects devices where the primary
-  // input mechanism can hover over elements. (e.g. computers with a mouse)
   @media (hover: hover) {
-    // Since we are using a mouse, it's safe to show the custom select.
     .selectCustom {
       display: block;
     }
 
-    // In a computer using keyboard? Then let's hide back the custom select
-    // while the native one is focused:
     .selectNative:focus + .selectCustom {
       display: none;
     }
@@ -116,6 +105,7 @@
     border-radius: 0 0 6px 6px;
     background: rgba(196, 196, 196, 0.4);
     z-index: 1;
+    z-index: 5;
     display: none;
   }
   
@@ -171,10 +161,58 @@
   }
 }
 
-#map {
-  height: 100%;
+.filteredBusiness {
   width: 100%;
-  /* The width is the width of the web page */
+  height: auto;
+
+  .result-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      .Text1 {
+        margin-top: 3px;
+      }
+      .Text2 {
+          margin-top: 3px;
+      }
+    }
+  }
+
+  .result-img {
+    width: 120px;
+    height: auto;
+  }
+
+  .Text1 {
+    width: 32%;
+    margin-top: 20px;
+
+    &:last-of-type {
+      margin-top: 3px;
+    }
+  }
+
+  .Text2 {
+    width: 30%;
+    text-align: end;
+    margin-top: 20px;
+
+    &:last-of-type {
+      margin-top: 3px;
+    }
+  }
+}
+
+.margin {
+  margin: 263px 0 -40px;
+}
+
+#map {
   height: 648px;
   width: 100%;
   position: relative;
@@ -238,4 +276,58 @@
  p {
   text-align: end !important;
  }
+}
+
+// Media Queries 
+@media (min-width: 1201px) {
+  .top {
+    width: 810px;
+    margin: auto;
+  }
+
+  .filteredBusiness {
+    padding: 0 270px;
+    }  
+}
+
+@media (max-width: 1200px) {
+  .sapnus-atbalsta .top {
+    margin: 0 6.25%;
+  }
+
+  .filteredBusiness {
+    padding: 0 6.25%;
+    }
+  #map {
+    height: 812px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    flex-direction: column;
+    margin: 90px 0 80px;
+  }
+
+  .select {
+    width: 280px;
+
+   &:last-of-type {
+      margin-top: 40px;
+    }
+
+    .selectCustom-trigger {
+      width: 280px;
+      height: 41.35px;
+    }
+
+    .selectCustom, .selectNative {
+      width: 280px;
+      height: 41.35px;
+    }
+  }
+
+  #map {
+    height: 606px;
+  }
 }

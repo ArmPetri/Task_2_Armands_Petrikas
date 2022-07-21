@@ -1,21 +1,31 @@
 @use '../base/colors';
 @use '../util/fonts';
 
-.sapnu-banka {
+.sapnu-banka .hero {
   margin-bottom: 47.4px;
+
+  // .hero {
+
+    .play-button:hover {
+        opacity: 0.9;
+          transition: all 0.1s ease-in-out;
+    }
+  // }
 }
 
 .sapnu-banka .top, .sapnu-banka .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 86px 0 -7px;;
+  margin: 86px auto -7px;;
 
   h1 {
     text-align: center;
     line-height: 71px;
   }
 }
+
+
 
 .goal-mission {
   display: flex;

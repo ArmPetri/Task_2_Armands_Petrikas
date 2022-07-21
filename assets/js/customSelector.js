@@ -93,6 +93,9 @@ function hybridSoloInit(elSelect) {
 
     elSelectCustomBox.textContent = text;
     optionChecked = value;
+
+    // ADD on 20th 
+    initMap(optionChecked)
   }
 
   function watchClickOutside(e) {
