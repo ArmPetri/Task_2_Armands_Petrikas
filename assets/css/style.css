@@ -1775,7 +1775,6 @@ main .hero-image {
 .reviews {
   position: relative;
   padding: 150px 0 155px;
-  z-index: 10;
   margin-bottom: -6px;
   display: flex;
   flex-direction: column;
@@ -1806,6 +1805,7 @@ main .hero-image {
   width: 602px;
   display: flex;
   margin-top: 30px;
+  margin-top: 59px;
 }
 .reviews .arrow-right, .reviews .arrow-left {
   cursor: pointer;
@@ -1860,17 +1860,26 @@ main .hero-image {
     height: 476px;
   }
 
-  .reviews .text-wrapper {
+  .reviews {
     margin: 0 6.25%;
+  }
+  .reviews .text-wrapper {
+    width: 100%;
+    margin-left: 0;
   }
   .reviews h3 {
     font-size: 18px;
   }
   .reviews .Text2 {
     font-size: 14px;
+    width: auto;
   }
   .reviews .Text1 {
     font-size: 12px;
+    width: 70%;
+  }
+  .reviews .arrows {
+    width: 100%;
   }
 }
 .piesaki-sapni {

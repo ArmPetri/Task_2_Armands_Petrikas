@@ -64,7 +64,7 @@
 .reviews {
   position: relative;
   padding: 150px 0 155px;
-  z-index: 10;
+  // z-index: 10;
   margin-bottom: -6px;
   display: flex;
   flex-direction: column;
@@ -99,6 +99,7 @@
     width: 602px;
     display: flex;
     margin-top: 30px;
+    margin-top: 59px;
   }
 
   .arrow-right, .arrow-left {
@@ -166,9 +167,12 @@
   }
 
   .reviews {
+    margin: 0 6.25%;
 
     .text-wrapper {
-      margin: 0 6.25%;
+      width: 100%;
+      margin-left: 0;
+      // padding: 0 6.25%;
     }
 
     h3 {
@@ -177,10 +181,16 @@
 
     .Text2 {
       font-size: 14px;
+      width: auto;
      }
 
     .Text1 {
       font-size: 12px;
-     }    
+      width: 70%;
+     } 
+     
+     .arrows {
+      width: 100%;
+     }
   }
 }

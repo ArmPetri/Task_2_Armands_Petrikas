@@ -7,12 +7,12 @@ const reviewArray = [
   {
     name: 'George Baron',
     title: 'CEO, Boston Theater',
-    review: 'For it is Juris work that is the light the human race needs so badly these days. His vision is inspired and talent is beyond measure.'
+    review: 'Always contributes vigorously to the efforts of the team, whether as a leader or a team member.'
   },
   {
     name: 'Tim Kennedy',
     title: 'Dancer, Margot Fonteyn Academy of Ballet',
-    review: 'For it is Juris work that is the light the human race needs so badly these days. His vision is inspired and talent is beyond measure.'
+    review: 'Sympathetically helps others to address their weaknesses. Regularly produces creative, original ideas, plans, products or methods '
   },
 ]
 
@@ -36,32 +36,33 @@ textWrapper.append(reviewerTitle)
 textWrapper.append(review)
 reviews.prepend(textWrapper)
 
-let currentReview = 0
+let reviewIndex = 1
+showReview(currentReview)
 
-//   let generateReview = () => {
-reviewerName.innerHTML = reviewArray[currentReview].name
-reviewerTitle.innerHTML = reviewArray[currentReview].title
-review.innerHTML = reviewArray[currentReview].review
-//   }
+leftArrow.addEventListener('click', () => {
+  plusReview(-1)
+})
 
-  leftArrow.addEventListener('click', () => {
-    if(currentReview === 0){
-      currentReview = reviewArray.length
-    } else {
-      currentReview = reviewArray.length - 1
-    }
-  })
+rightArrow.addEventListener('click', () => {
+    plusReview(1)
+})
 
-  rightArrow.addEventListener('click', () => {
-    if(currentReview === reviewArray.length){
-      currentReview = 0
-    } else {
-      currentReview = reviewArray.length + 1
-    }
-  })
+function plusReview(n) {
+  showReview(reviewIndex += n);
+}
 
-  // let generateReview = () => {
-   
-  // }
+// Thumbnail image controls
+function currentReview(n) {
+  showReview(reviewIndex = n);
+}
 
-// generateReview(currentReview)
+function showReview(n) {
+  let i;
+  if (n > reviewArray.length) {reviewIndex = 1}
+  if (n < 1) {reviewIndex = reviewArray.length}
+
+  reviewerName.innerHTML = reviewArray[reviewIndex-1].name
+  reviewerTitle.innerHTML = reviewArray[reviewIndex-1].title
+  review.innerHTML = reviewArray[reviewIndex-1].review
+}
+

@@ -120,7 +120,7 @@ function initMap(sel) {
       lat: '56.95984755356249',
       long: '24.101384645927986',
       city: 'Rīga',
-      imgUrl: '../../assets/img/map\ purch.png',
+      imgUrl: './assets/img/map\ purch.png',
       phone: '+371 28361686',
       email: 'info@purch.com',
       address: 'Dzelzavas iela 51A'
@@ -131,7 +131,7 @@ function initMap(sel) {
       lat: '56.95063246816818',
       long: '24.08491499333425',
       city: 'Rīga',
-      imgUrl: '../../assets/img/map\ kurts.png',
+      imgUrl: './assets/img/map\ kurts.png',
       phone: '+371 28361686',
       email: 'info@kurtscoffee.lv',
       address: 'Cēsu iela 20, Tērbatas iela 2i'
@@ -142,7 +142,7 @@ function initMap(sel) {
       lat: '56.942005337118886',
       long: '24.130202359745546',
       city: 'Rīga',
-      imgUrl: '../../assets/img/AUCHlogo.png',
+      imgUrl: './assets/img/AUCHlogo.png',
       phone: '+371 28361686',
       email: 'auchbeauty@gmail.com',
       address: 'Maskavas iela 5, Rīga'
@@ -153,7 +153,7 @@ function initMap(sel) {
       lat: '56.93967305929707',
       long: '24.09642828387112',
       city: 'Rīga',
-      imgUrl: '../../assets/img/map\ solarium.png',
+      imgUrl: './assets/img/map\ solarium.png',
       phone: '+371 28361686',
       email: 'info@solarbeauty.lv',
       address: 'Torņakalna iela 31, Rīga'
@@ -164,7 +164,7 @@ function initMap(sel) {
       lat: '56.94988672066354',
       long: '24.106254577738383',
       city: 'Rīga',
-      imgUrl: '../../assets/img/map\ warming.png',
+      imgUrl: './assets/img/map\ warming.png',
       phone: '+371 28361686',
       email: 'info@yogacentrs.lv',
       address: 'Staļļu iela 13, Rīga'
@@ -175,7 +175,7 @@ function initMap(sel) {
       lat: '56.64126222089826',
       long: '23.689934721867015',
       city: 'Jelgava',
-      imgUrl: '../../assets/img/map\ spa.png',
+      imgUrl: './assets/img/map\ spa.png',
       phone: '+371 28361686',
       email: 'info@spatown.com',
       address: 'Liepas iela 2, Jelgava'
@@ -186,7 +186,7 @@ function initMap(sel) {
       lat: '56.65934625045924',
       long: '23.737695953305572',
       city: 'Jelgava',
-      imgUrl: '../../assets/img/map\ eco.png',
+      imgUrl: './assets/img/map\ eco.png',
       phone: '+371 28361686',
       email: 'info@eff.lv',
       address: 'Brīvības iela 2, Jelgava'
@@ -197,7 +197,7 @@ function initMap(sel) {
       lat: '56.650826970875634',
       long: '23.74117524831103',
       city: 'Jelgava',
-      imgUrl: '../../assets/img/map\ weights.png',
+      imgUrl: './assets/img/map\ weights.png',
       phone: '+371 28361686',
       email: 'info@musclefit.lv',
       address: 'Baložu iela 10, Jelgava'
@@ -208,7 +208,7 @@ function initMap(sel) {
       lat: '56.819401307430965',
       long: '24.594447799932812',
       city: 'Ogre',
-      imgUrl: '../../assets/img/map\ pizza.png',
+      imgUrl: './assets/img/map\ pizza.png',
       phone: '+371 28361686',
       email: 'info@hawaipizza.lv',
       address: 'Vidus Prospekts 43, Ogre'
@@ -219,7 +219,7 @@ function initMap(sel) {
       lat: '56.81075720383894',
       long: '24.609725661980164',
       city: 'Ogre',
-      imgUrl: '../../assets/img/map\ tray.png',
+      imgUrl: './assets/img/map\ tray.png',
       phone: '+371 28361686',
       email: 'info@finedine.lv',
       address: 'Dārza iela 25, Ogre'
@@ -230,7 +230,7 @@ function initMap(sel) {
       lat: '56.8146226105645',
       long: '24.616626632531126',
       city: 'Ogre',
-      imgUrl: '../../assets/img/map\ dumbbell.png',
+      imgUrl: './assets/img/map\ dumbbell.png',
       phone: '+371 28361686',
       email: 'info@sportastunda.lv',
       address: 'Jāņa Čakstes iela 31, Ogre'
@@ -307,8 +307,8 @@ if(whichFilter.length !== 0 && whichCity.length !== 0){
     }
   } 
 
-  let orangeMarker = "../../assets/img/map\ marker\ orange.png"
-  let blackMarker = "../../assets/img/map\ marker\ black.png"
+  let orangeMarker = "./assets/img/map\ marker\ orange.png"
+  let blackMarker = "./assets/img/map\ marker\ black.png"
 
   let map = new google.maps.Map(document.getElementById("map"), 
   {
