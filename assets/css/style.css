@@ -467,12 +467,11 @@ h3 {
 }
 #header-background {
   background: url(../../assets/img/header\ background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .header {
-  height: 120px;
+  min-height: 120px;
+  max-height: 174px;
   padding: 0 45px 0 45px;
   display: flex;
   flex-direction: row;
@@ -480,6 +479,8 @@ h3 {
   align-items: center;
   z-index: 3;
   position: relative;
+  background-repeat: repeat;
+  background-size: contain;
 }
 .header .logo {
   position: absolute;
@@ -572,32 +573,12 @@ h3 {
   top: 0;
   left: 0;
 }
-@media (min-width: 1367px) {
-  .header .header {
-    height: 160px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+@media (min-width: 1201px) {
+  .header #header-background {
+    background: url(../../assets/img/header\ background.png);
+    background-repeat: repeat;
+    background-size: contain;
   }
-  .header .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    height: 45px;
-    padding-bottom: 8px;
-    margin-left: 258px;
-  }
-  .header .mobile-nav {
-    display: none;
-  }
-  .header .hamburger {
-    display: none;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1366px) {
   .header .header {
     width: 100%;
     height: 120px;
@@ -606,6 +587,8 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    background-repeat: repeat;
+    background-size: contain;
   }
   .header .nav {
     display: flex;
@@ -625,6 +608,11 @@ h3 {
   }
 }
 @media (max-width: 1200px) {
+  .header #header-background {
+    background: url(../../assets/img/header\ background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .header .header {
     display: flex;
     flex-direction: row;
@@ -661,6 +649,12 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  #header-background {
+    background: url(../../assets/img/header\ background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .header {
     width: 100%;
     height: auto;

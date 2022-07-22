@@ -4,16 +4,18 @@
 @use '../base/breakpoints' as breakpoints;
 
 #header-background {
-  @include mix.background($background: url(../../assets/img/header\ background.png));
+  background: url(../../assets/img/header\ background.png);
 }
 
 .header {
-  // @include mix.size($min-height: 120px);
-  height: 120px;
+  min-height: 120px;
+  max-height: 174px;
   @include mix.padding($right: 45px, $left: 45px);
   @include mix.flex($justify: space-between, $align: center);
   z-index: 3;
   position: relative;
+    background-repeat:repeat ;
+  background-size: contain;
   
   .logo {
     @include mix.position($position: absolute, $top: -15px, $left: 62px);
@@ -111,34 +113,17 @@
     left: 0;
   }
   
-
   // Media Queries 
-@media (min-width: 1367px){
-  .header {
-    height: 160px;
-    @include mix.flex($justify: space-between, $align: flex-end);
-  }
-  .nav {
-    @include mix.flex($justify: space-between, $align: flex-end);
-    width: 100%;
-    height: 45px;
-    padding-bottom: 8px;
-    margin-left: 258px;
+@media (min-width: breakpoints.$large){
+  #header-background {
+    @include mix.background($background: url(../../assets/img/header\ background.png), $background-repeat: repeat, $background-size: contain );
   }
 
-  .mobile-nav {
-		display: none;
-	}
-
-	.hamburger {
-		display: none;
-  }
-}
-  
-@media (min-width: breakpoints.$large) and (max-width: 1366px){
   .header {
     @include mix.size($height: 120px,$min-height: 120px);
     @include mix.flex($justify: space-between, $align: flex-end);
+    background-repeat:repeat ;
+    background-size: contain;
   }
 
   .nav {
@@ -159,6 +144,10 @@
 }
 
 @media (max-width: breakpoints.$medium){
+  #header-background {
+    @include mix.background($background: url(../../assets/img/header\ background.png), $background-repeat: no-repeat, $background-size: cover);
+  }
+
   .header {
     @include mix.flex($justify: space-between);
     @include mix.size($height: 96px, $min-height: 96px);
@@ -187,6 +176,10 @@
 }
 
 @media (max-width: breakpoints.$small) {
+  #header-background {
+    @include mix.background($background: url(../../assets/img/header\ background.png), $background-repeat: no-repeat, $background-size: cover);
+  }
+
   .header{
     @include mix.size($min-height: 67.09px);
     position: relative;
