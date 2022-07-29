@@ -1,5 +1,6 @@
 // Dynamic Grid 
 let gridContainer = document.querySelector('#video-grid')
+const screenWidth = window.innerWidth
 
 let videoArray = [
 {
@@ -72,85 +73,106 @@ let videoArray = [
 },
 ]
 
-videoArray.length = videoArray.length + 82;
+videoArray.length = screenWidth > 1200 ? videoArray.length + 82 : videoArray.length +3
 
-for(i = 0; i < videoArray.length; i++) {
-  let imageDiv = document.createElement('div')
-  imageDiv.setAttribute('class', "eachVideo");
+let skatitVairak = document.createElement('button')
+skatitVairak.setAttribute('class', "skatit-vairak");
+skatitVairak.innerHTML = "Skatīt vairāk"
+
+skatitVairak.addEventListener('click', () => {
+ videoArray.length = videoArray.length + 82
+  createGrid(videoArray.length)
+  skatitVairak.style.display = "none"
+})
+
+createGrid(videoArray.length)
+
+
+function createGrid(arrLength){
+ 
   
-  let imageOverlay = document.createElement('div')
-  imageOverlay.setAttribute('class', "img-overlay");
-
-  let name = document.createElement('h3')
-  let nameInVideo = document.createElement('h3')
-
-  let num = document.createElement('h2')
-  num.setAttribute('class', 'image-num')
-  num.innerHTML = i +1
-
-  let img = document.createElement('img');
-
-  if(videoArray[i] !== undefined) {
-    img.src = videoArray[i].poster
-    img.setAttribute('class', 'image')
-
-    imageDiv.append(img)
-    imageDiv.append(imageOverlay)
+  for(i = 0; i < arrLength; i++) {
+    let imageDiv = document.createElement('div')
+    imageDiv.setAttribute('class', "eachVideo");
     
-    name.setAttribute('class', 'name')
-    name.innerHTML = videoArray[i].name
-
-    nameInVideo.setAttribute('class', 'name-in-video')
-    nameInVideo.innerHTML = videoArray[i].name
-
-    let videoOverlay = document.createElement('div')
-    videoOverlay.setAttribute('class', 'video-overlay')
-
-    let videoTag = document.createElement('VIDEO')
-    videoTag.setAttribute('class', 'video-tag')
-    videoTag.poster = "./assets/img/video-poster.png";
-    videoTag.setAttribute("width", "912");
-    videoTag.setAttribute("height", "511");
-
-    let x = document.createElement('img')
-    x.setAttribute('class', "close-button")
-    x.setAttribute('src', "./assets/img/x.png")
-
-    x.addEventListener('click', () => {
-      videoOverlay.remove()
-      document.body.classList.remove('overlay-body')
-    })
-
-
-    let playButton = document.createElement('img')
-    playButton.setAttribute('class', "play-button")
-    playButton.setAttribute('src', "./assets/img/Vector.svg")
-
-
-    imageDiv.addEventListener('click', () => {
-
-      
-      videoOverlay.append(x)
-      videoOverlay.append(playButton)
-      videoOverlay.append(videoTag)
-      videoOverlay.append(nameInVideo)
-      gridContainer.append(videoOverlay)
+    let imageOverlay = document.createElement('div')
+    imageOverlay.setAttribute('class', "img-overlay");
   
-      document.body.classList.add('overlay-body')
-
-    })
-  } else if (videoArray[i] === undefined) {
-    img.src = "./assets/img/image-grid-background.png";
-    img.setAttribute('class', 'image2')
-
-    imageOverlay.opacity = 1;
-
-    name.setAttribute('class', 'name2')  
-    name.innerHTML = 'Jauns stāsts tiks pievienots drīzumā'
+    let name = document.createElement('h3')
+    let nameInVideo = document.createElement('h3')
+  
+    let num = document.createElement('h2')
+    num.setAttribute('class', 'image-num')
+    num.innerHTML = i +1
+  
+    let img = document.createElement('img');
+  
+    if(videoArray[i] !== undefined) {
+      img.src = videoArray[i].poster
+      img.setAttribute('class', 'image')
+  
+      imageDiv.append(img)
+      imageDiv.append(imageOverlay)
+      
+      name.setAttribute('class', 'name')
+      name.innerHTML = videoArray[i].name
+  
+      nameInVideo.setAttribute('class', 'name-in-video')
+      nameInVideo.innerHTML = videoArray[i].name
+  
+      let videoOverlay = document.createElement('div')
+      videoOverlay.setAttribute('class', 'video-overlay')
+  
+      let videoTag = document.createElement('VIDEO')
+      videoTag.setAttribute('class', 'video-tag')
+      videoTag.poster = "./assets/img/video-poster.png";
+      videoTag.setAttribute("width", "912");
+      videoTag.setAttribute("height", "511");
+  
+      let x = document.createElement('img')
+      x.setAttribute('class', "close-button")
+      x.setAttribute('src', "./assets/img/x.png")
+  
+      x.addEventListener('click', () => {
+        videoOverlay.remove()
+        document.body.classList.remove('overlay-body')
+      })
+  
+  
+      let playButton = document.createElement('img')
+      playButton.setAttribute('class', "play-button")
+      playButton.setAttribute('src', "./assets/img/Vector.svg")
+  
+  
+      imageDiv.addEventListener('click', () => {
+  
+        
+        videoOverlay.append(x)
+        videoOverlay.append(playButton)
+        videoOverlay.append(videoTag)
+        videoOverlay.append(nameInVideo)
+        gridContainer.append(videoOverlay)
+    
+        document.body.classList.add('overlay-body')
+  
+      })
+    } else if (videoArray[i] === undefined) {
+      img.src = "./assets/img/image-grid-background.png";
+      img.setAttribute('class', 'image2')
+  
+      imageOverlay.opacity = 1;
+  
+      name.setAttribute('class', 'name2')  
+      name.innerHTML = 'Jauns stāsts tiks pievienots drīzumā'
+    }
+  
+    imageDiv.append(img)
+    imageDiv.append(name)
+    imageDiv.append(num)
+    gridContainer.append(imageDiv)
   }
 
-  imageDiv.append(img)
-  imageDiv.append(name)
-  imageDiv.append(num)
-  gridContainer.append(imageDiv)
+  screenWidth < 1200 && gridContainer.after(skatitVairak)
 }
+
+

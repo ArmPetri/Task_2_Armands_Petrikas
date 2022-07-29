@@ -24,3 +24,19 @@ picture {
   max-width: 100%;
   display: block;
 }
+
+* {-webkit-font-smoothing: antialiased;}
+
+// input, textarea, select {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none; 
+// }
+
+// @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+//   input[type='checkbox'],
+//   input[type='radio'] {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//   }
+// }

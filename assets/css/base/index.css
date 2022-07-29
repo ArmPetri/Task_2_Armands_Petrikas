@@ -1,4 +1,8 @@
 @font-face {
+  font-family: "Montserrat-All";
+  src: url("../../assets/font/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
   font-family: "Montserrat-Regular";
   src: url("../../assets/font/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
 }
@@ -40,6 +44,10 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {

@@ -1,4 +1,8 @@
 @font-face {
+  font-family: 'Montserrat-All';
+  src: url('../../assets/font/Montserrat/Montserrat-VariableFont_wght.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
   font-family: 'Montserrat-Regular';
   src: url('../../assets/font/Montserrat/static/Montserrat-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
@@ -19,6 +23,7 @@
   src: url('../../assets/font/Oswald/static/Oswald-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
+$MontserratAll: 'Montserrat-All', sans-serif;
 $Montserrat: 'Montserrat-Regular', sans-serif;
 $MontserratM: 'Montserrat-Medium', sans-serif;
 $MontserratB: 'Montserrat-Bold', sans-serif;

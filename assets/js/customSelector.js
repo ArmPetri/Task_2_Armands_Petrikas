@@ -13,6 +13,8 @@ function hybridSoloInit(elSelect) {
   let optionChecked = "";
   let optionHoveredIndex = -1;
 
+  console.log(elSelectCustomBox)
+
   // Toggle custom select visibility when clicking the box
   elSelectCustomBox.addEventListener("click", (e) => {
     const isClosed = !elSelectCustom.classList.contains("isActive");
@@ -20,16 +22,16 @@ function hybridSoloInit(elSelect) {
     if (isClosed) {
       openSelectCustom();
       if(screenWidth > 768) {
-        document.querySelector('.location').style.marginBottom = "80px";
+        document.querySelector('.location').style.marginBottom = "130px";
       } else {
-        elSelect.style.marginBottom = "80px";
+        elSelect.style.marginBottom = "130px";
       }
     } else {
       closeSelectCustom();
       if(screenWidth > 768) {
-        document.querySelector('.location').style.marginBottom = "0";
+        document.querySelector('.location').style.marginBottom = "unset";
       } else {
-        elSelect.style.marginBottom = "0";
+        elSelect.style.marginBottom = "unset";
       }
     }
   });
@@ -45,15 +47,18 @@ function hybridSoloInit(elSelect) {
         (el) => el.getAttribute("data-value") === optionChecked
       );
       updateCustomSelectHovered(optionCheckedIndex);
+      // document.querySelector('.location').style.marginBottom = "0";
     }
 
     // Add related event listeners
     document.addEventListener("click", watchClickOutside);
+    // document.querySelector('.location').style.marginBottom = "0";
     // document.addEventListener("keydown", supportKeyboardNavigation);
   }
 
   function closeSelectCustom() {
     elSelectCustom.classList.remove("isActive");
+    elSelectCustomBox.style.fontWeight = 'bolder'
 
     elSelectCustom.setAttribute("aria-hidden", true);
 
@@ -61,7 +66,9 @@ function hybridSoloInit(elSelect) {
 
     // Remove related event listeners
     document.removeEventListener("click", watchClickOutside);
+    elSelect.style.marginBottom = "unset";
     // document.removeEventListener("keydown", supportKeyboardNavigation);
+    // document.querySelector('.location').style.marginBottom = "0";
   }
 
   function updateCustomSelectHovered(newIndex) {
@@ -93,6 +100,7 @@ function hybridSoloInit(elSelect) {
     if (elOption) {
       elOption.classList.add("isActive");
     }
+    // document.querySelector('.location').style.marginBottom = "20px";
 
     elSelectCustomBox.textContent = text;
     optionChecked = value;
@@ -105,6 +113,8 @@ function hybridSoloInit(elSelect) {
     const didClickedOutside = !elSelectCustom.contains(event.target);
     if (didClickedOutside) {
       closeSelectCustom();
+      // document.querySelector('.location').style.marginBottom = "20px";
+
     }
   }
 
@@ -128,6 +138,7 @@ function hybridSoloInit(elSelect) {
       elSelectNative.value = value;
       updateCustomSelectChecked(value, e.target.textContent);
       closeSelectCustom();
+      document.querySelector('.location').style.marginBottom = "unset";
     });
 
     elOption.addEventListener("mouseenter", (e) => {

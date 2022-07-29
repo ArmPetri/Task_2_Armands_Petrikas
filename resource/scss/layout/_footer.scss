@@ -163,6 +163,10 @@ footer {
   .socials {
     margin-bottom: 12px;
   }
+
+  .for-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 1200px) {

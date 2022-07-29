@@ -21,10 +21,17 @@
 }
 
 .juris {
+  height: 705px;
+  width: 100%;
   position: relative;
   text-align: center;
   display: flex;
   justify-content: center;
+  background-image: url(../../assets/img/Juris\ \(1\)\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position: -100px;
+  // border: 1px solid red;
 
   .ripped-top {
     z-index: 3;
@@ -35,11 +42,11 @@
     left: 0;
   }
   
-  .background {
-    z-index: -1;
-    width: 100%;
-    transform: scale(0.998);
-  }
+  // .background {
+  //   z-index: -1;
+  //   width: 100%;
+  //   transform: scale(0.998);
+  // }
   
   .ripped-bottom {
     position: absolute;
@@ -125,6 +132,10 @@
   }
 }
 @media (max-width: 1200px) {
+  .juris {
+    height: 499px;
+  background-position: 50%;
+  }
   .juris-text {
     bottom: 88px;
   }
@@ -147,9 +158,11 @@
   .juris {
     padding: 0 6.25%;
     height: 476px;
-    background-image: url(../../../assets/img/Juris\ \(1\)\ 1.png);
-    background-size: cover;
-    background-position: -400px;
+    // background-image: url(../../assets/img/Juris\ \(1\)\ 1.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: -400px;
+    background-position: 70%;
     display: flex;
     align-items: flex-end;
 

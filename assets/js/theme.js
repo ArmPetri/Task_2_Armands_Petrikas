@@ -30,16 +30,50 @@ const header = document.querySelector('.header');
 document.addEventListener("scroll", scrolling);
 
 let scrollUpButton = document.querySelector("#scrollUpButton");
+let  footerHeight = document.querySelector('footer').offsetHeight;
+
+
+// console.log(footerHeight)
+// console.log(scrollUpButton.scrollTop)
 
 function scrolling() {
   let scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let GOLDEN_RATIO = 0.3;
+  // let stophere = scrollableHeight - footerHeight
+  let stophere = document.body.clientHeight - footerHeight + 100
+
+  // window.onscroll = loc()
+  // function loc() {
+  //   console.log(document.body.scrollTop)
+  // }
+
+  // let rect = window.getBoundingClientRect().bottom;
+  // console.log(scrollableHeight)
+  // console.log(stophere)
+  console.log(stophere)
+  console.log(window.pageYOffset)
+  // console.log(document.documentElement.scrollTop)
+  // console.log(document.body.clientHeight)
+  // console.log(footerHeight)
+
+  // scrollUpButton.style.bottom = rect + 'px'
 
   if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
     scrollUpButton.style.display = "block";
   } else {
     scrollUpButton.style.display = "none";
+    scrollUpButton.position = 'initial'
   }
+
+  if (stophere === window.pageYOffset) {
+  // if (stophere === document.body.clientHeight) {
+    console.log('here')
+    scrollUpButton.style.position = 'sticky'
+} 
+
+// console.log(scrollUpButton.scrollTop)
+
+  // if(footerHeight)
 }
 
 scrollUpButton.addEventListener("click", scrollToTop);
@@ -49,6 +83,7 @@ scrollUpButton.addEventListener("click", scrollToTop);
       top: 0,
       behavior: "smooth"
     })
+    // scrollUpButton.style.position = 'initial'
   }
 
 

@@ -52,11 +52,28 @@
   .uznemejiem .Text2{
     width: 810px;
   }
+
+  .uznemejiem {
+    .contact {
+      h2:last-of-type {
+        display: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {
   .uznemejiem {
     padding: 86px 0% 50px;
+    
+    .contact {
+      h2:first-of-type {
+        display: none;
+      }
+      h2:last-of-type {
+        display:inline;
+      }
+    }
   }
   
  .uznemejiem .Text2{
