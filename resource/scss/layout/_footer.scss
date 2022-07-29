@@ -6,7 +6,6 @@ footer {
   @include mix.background($background: url(../../assets/img/footer\ background.png));
   @include mix.size($min-height: 376px);
   padding-top: 70px 82px 20px 82px;
-  // z-index: 100;
   display: flex;
   position: relative;
 }
@@ -22,7 +21,6 @@ footer {
   @include mix.flex($direction: column, $justify: space-between, $align: flex-start);
 
   &:nth-of-type(1) {
-    // width: 83%;
     width: 81%;
 
     p {
@@ -75,7 +73,6 @@ footer {
       line-height: 29px;
       color: colors.$white;
     }
-
 
     p:nth-of-type(4){
       margin-top: -0.5rem;

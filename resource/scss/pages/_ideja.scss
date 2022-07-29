@@ -30,8 +30,6 @@
   background-image: url(../../assets/img/Juris\ \(1\)\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: -100px;
-  // border: 1px solid red;
 
   .ripped-top {
     z-index: 3;
@@ -42,12 +40,6 @@
     left: 0;
   }
   
-  // .background {
-  //   z-index: -1;
-  //   width: 100%;
-  //   transform: scale(0.998);
-  // }
-  
   .ripped-bottom {
     position: absolute;
 
@@ -57,7 +49,6 @@
     bottom: -5px;
   }
 
-  
   .juris-text {
     margin: auto;
     position: absolute;
@@ -71,8 +62,6 @@
 .reviews {
   position: relative;
   padding: 150px 0 155px;
-  // z-index: 10;
-  // margin-bottom: -6px;
   margin-bottom: -67px;
   display: flex;
   flex-direction: column;
@@ -159,10 +148,6 @@
   .juris {
     padding: 0 6.25%;
     height: 476px;
-    // background-image: url(../../assets/img/Juris\ \(1\)\ 1.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: -400px;
     background-position: 70%;
     display: flex;
     align-items: flex-end;
@@ -186,7 +171,6 @@
     .text-wrapper {
       width: 100%;
       margin-left: 0;
-      // padding: 0 6.25%;
     }
 
     h3 {

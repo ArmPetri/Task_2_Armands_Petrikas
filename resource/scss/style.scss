@@ -1,47 +1,17 @@
+// Resets 
 @use 'resets/normalize';
-// @use 'resets/the_new_css_reset';
-// @forward 'layout';
 
-
-
-// 1. Configuration and helpers
-// @forward
-//   'abstracts/variables',
-//   'abstracts/functions',
-//   'abstracts/mixins';
-
-// 2. Vendors
-
-// @forward
-//   'vendors/normalize';
-
-// 3. Base stuff
+// Base stuff
 @use 'base';
-// @forward
-//   'base/base',
-//   'base/fonts',
-//   'base/typography',
-//   'base/helpers';
 
-// 4. Layout-related sections
+//  Layout-related sections
 @use 'layout';
 
-// 5. Components
+//  Components
 @use 'components';
-// @forward
-//   'components/button';
 
-// 6. Page-specific styles
+// Page-specific styles
 @use 'pages';
-// @use 'pages/home';
-// @use 'pages/ideja';
-// @use 'pages/piesaki_sapni';
-// @use 'pages/uznemejiem';
-// @use 'pages/sapnu_banka';
-// @use 'pages/sapnus_atbalsta';
 
-// 7. Themes
-// @forward
-//   'themes/default';
 @use 'util'
 

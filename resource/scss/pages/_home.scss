@@ -312,7 +312,6 @@ main {
 
   input {
       background-color: #E7E7E7;
-      // border: 2px solid #999;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px;
@@ -320,26 +319,17 @@ main {
       height: 16px;
   }
 
-  // input[type=checkbox]:focus {
-  //   box-shadow: 0 0 2px #999;
-  //   outline: 0;
-  // }
-
   @supports (-webkit-appearance: none) or (-moz-appearance: none) {
     input[type='checkbox'] {
       -webkit-appearance: none;
       -moz-appearance: none;
       position: relative;
-      // display: inline-block;
-      // background: white;
       background-color: #E7E7E7;
 
       cursor: pointer;
       
       margin: 0;
       padding: 0;
-      // vertical-align: middle;
-      // border: 2px solid #999;
       -webkit-transition: background .3s, border-color .3s, box-shadow .2s;
       transition: background .3s, border-color .3s, box-shadow .2s;
     }
@@ -356,7 +346,6 @@ main {
     }
     input[type='checkbox']:checked {
       background: colors.$orange;
-      // border: 2px solid colors.$orange;
       -webkit-transition: opacity 0.3s, -webkit-transform 0.6s cubic-bezier(.2, .85, .32, 1.2);
       transition: opacity 0.3s, -webkit-transform 0.6s cubic-bezier(.2, .85, .32, 1.2);
       transition: transform 0.6s cubic-bezier(.2, .85, .32, 1.2), opacity 0.3s;
@@ -454,16 +443,12 @@ main {
   border-radius: 0.313rem;
   cursor: pointer;
   padding: 1rem 1.3rem;
-  // position: fixed; 
   position: sticky; 
-  // bottom: 10%; 
   bottom: 100px; 
-  // right: 5%;
   z-index: 100; 
   display: none; 
   left: 90%;
   text-align: center;
-  // margin: auto;
   padding: auto;
   opacity: 0.8;
   transform: rotate(-90deg);
@@ -478,7 +463,6 @@ main {
   display: block;
   background-color: colors.$white;
   transition: 0.4s;
-  // transition: 5s;
   z-index: 5;
 }
 
@@ -491,33 +475,12 @@ main {
   display: flex;
 }
 
-// .mobile-nav a {
-//   font-family: fonts.$MontserratM;
-//       font-style: normal;
-//       font-weight: 500;
-//       font-size: 18px;
-//       line-height: 22px;
-//       // height: 24px;
-//       color: colors.$navbar;
-//       text-decoration: none;
-//       // border-bottom: 3px solid transparent;
-//       transition: all 0.1s ease-in-out;
-//       text-align: center;
-// }
-
-// a:hover {
-//   border-bottom: 3px solid colors.$orange;
-//       transition: all 0.1s ease-in-out;
-//       text-shadow: 0px 0px 0.7px colors.$navbar;
-// }
-
 // Media Queries 
 @media (min-width: 1201px) {
     .hero {
     height: 722px; 
     top: -1rem;
     position: relative;
-    // margin-top: -30px;
     margin-top: -58px;
 
     .play-button {
@@ -540,7 +503,6 @@ main {
     max-height: 722px; 
     margin-top: -39px;
     width: 100%;
-    // top: 1rem;
     top: 0;
     background-size: cover;
 
@@ -595,11 +557,9 @@ main {
 
   
   .mobile-nav a:hover {
-    // font-weight: bolder;
     border-bottom: 3px solid colors.$orange;
     transition: all 0.1s ease-in-out;
     text-shadow: 0px 0px 0.7px colors.$navbar;
-    // -webkit-text-shadow: 0px 0px 1px colors.$navbar;
     -webkit-text-stroke-width: 0.6px;
   }
 
@@ -709,9 +669,6 @@ main {
           order: 1;
           flex: 43.6%;
           margin-top: -22px;
-
-          // img {
-          // }
         }
       
         &:nth-of-type(4) {
