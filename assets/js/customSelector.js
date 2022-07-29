@@ -47,13 +47,10 @@ function hybridSoloInit(elSelect) {
         (el) => el.getAttribute("data-value") === optionChecked
       );
       updateCustomSelectHovered(optionCheckedIndex);
-      // document.querySelector('.location').style.marginBottom = "0";
     }
 
     // Add related event listeners
     document.addEventListener("click", watchClickOutside);
-    // document.querySelector('.location').style.marginBottom = "0";
-    // document.addEventListener("keydown", supportKeyboardNavigation);
   }
 
   function closeSelectCustom() {
@@ -67,8 +64,6 @@ function hybridSoloInit(elSelect) {
     // Remove related event listeners
     document.removeEventListener("click", watchClickOutside);
     elSelect.style.marginBottom = "unset";
-    // document.removeEventListener("keydown", supportKeyboardNavigation);
-    // document.querySelector('.location').style.marginBottom = "0";
   }
 
   function updateCustomSelectHovered(newIndex) {
@@ -100,12 +95,10 @@ function hybridSoloInit(elSelect) {
     if (elOption) {
       elOption.classList.add("isActive");
     }
-    // document.querySelector('.location').style.marginBottom = "20px";
 
     elSelectCustomBox.textContent = text;
     optionChecked = value;
 
-    // ADD on 20th 
     initMap(optionChecked)
   }
 
@@ -113,8 +106,6 @@ function hybridSoloInit(elSelect) {
     const didClickedOutside = !elSelectCustom.contains(event.target);
     if (didClickedOutside) {
       closeSelectCustom();
-      // document.querySelector('.location').style.marginBottom = "20px";
-
     }
   }
 
@@ -144,8 +135,6 @@ function hybridSoloInit(elSelect) {
     elOption.addEventListener("mouseenter", (e) => {
       updateCustomSelectHovered(index);
     });
-
-    // TODO: Toggle these event listeners based on selectCustom visibility
   });
 }
 
