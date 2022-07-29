@@ -406,7 +406,8 @@ main {
   height: 533.32px;
   background-image: url(../img/Subtract.png);
   background-size: cover;
-  margin-bottom: -81px;
+  // margin-bottom: -81px;
+  margin-bottom: -138px;
   
   h3 {
     font-family: fonts.$Oswald;
@@ -608,6 +609,13 @@ main {
     right: 0;
   }
 
+  .call-to-action {
+    div {
+      height: 154px;
+      justify-content: space-between;
+    }
+  }
+
   .contact {
     padding: 0 6.25%;
     margin: 0 auto 151px;
@@ -622,6 +630,10 @@ main {
     }
 
   }
+
+  .scroll_up {
+    left: 85%;
+  }  
 }
 
 @media (max-width: 768px) {
@@ -653,6 +665,8 @@ main {
     div {
       margin: 0;
       margin-left: unset;
+      height: initial;
+      justify-content: initial;
     }
   }
 
@@ -785,5 +799,9 @@ main {
       }
     }
   } 
+
+  .scroll_up {
+    left: 75%;
+  }  
 }
 

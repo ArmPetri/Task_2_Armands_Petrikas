@@ -22,7 +22,8 @@ footer {
   @include mix.flex($direction: column, $justify: space-between, $align: flex-start);
 
   &:nth-of-type(1) {
-    width: 83%;
+    // width: 83%;
+    width: 81%;
 
     p {
       display: none;

@@ -738,7 +738,7 @@ footer {
   align-items: flex-start;
 }
 .row:nth-of-type(1) {
-  width: 83%;
+  width: 81%;
 }
 .row:nth-of-type(1) p {
   display: none;
@@ -1496,7 +1496,7 @@ main .hero-image {
   height: 533.32px;
   background-image: url(../img/Subtract.png);
   background-size: cover;
-  margin-bottom: -81px;
+  margin-bottom: -138px;
 }
 .supporters h3 {
   font-family: "Oswald", sans-serif;
@@ -1658,6 +1658,11 @@ main .hero-image {
     right: 0;
   }
 
+  .call-to-action div {
+    height: 154px;
+    justify-content: space-between;
+  }
+
   .contact {
     padding: 0 6.25%;
     margin: 0 auto 151px;
@@ -1665,6 +1670,10 @@ main .hero-image {
 
   .people .column:nth-of-type(3) {
     margin-top: 0.5px;
+  }
+
+  .scroll_up {
+    left: 85%;
   }
 }
 @media (max-width: 768px) {
@@ -1695,6 +1704,8 @@ main .hero-image {
   .call-to-action div {
     margin: 0;
     margin-left: unset;
+    height: initial;
+    justify-content: initial;
   }
 
   .call-to-action div:nth-of-type(2) {
@@ -1807,6 +1818,10 @@ main .hero-image {
   .contact .name-email input {
     width: 100%;
   }
+
+  .scroll_up {
+    left: 75%;
+  }
 }
 .idea {
   display: flex;
@@ -1863,7 +1878,7 @@ main .hero-image {
 .reviews {
   position: relative;
   padding: 150px 0 155px;
-  margin-bottom: -6px;
+  margin-bottom: -67px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2123,7 +2138,7 @@ main .hero-image {
 }
 
 .dream .contact {
-  margin: 67px auto 151px;
+  margin: 67px auto 93px;
   z-index: 5;
   padding-bottom: -1px;
 }
@@ -2448,7 +2463,7 @@ main .hero-image {
   align-self: center;
 }
 .uznemejiem .contact {
-  margin: 155px auto 100px;
+  margin: 155px auto 43px;
 }
 .uznemejiem .contact h2 {
   margin-bottom: 59px;
@@ -2643,7 +2658,7 @@ main .hero-image {
 }
 
 .sapnu-banka .call-to-action {
-  padding: 154px 174px 150px;
+  padding: 154px 174px 93px;
 }
 
 @media (min-width: 1201px) {
@@ -2972,7 +2987,7 @@ main .hero-image {
   width: 100%;
   position: relative;
   bottom: -101px;
-  margin-bottom: 17px;
+  margin-bottom: -40px;
 }
 
 .gm-bundled-control-on-bottom {
@@ -3114,14 +3129,14 @@ main .hero-image {
 
   #map {
     height: 606px;
-    margin-bottom: -10px;
+    margin-bottom: -80px;
   }
 }
 .iedvesmas-stasti {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 82px 0 150px;
+  padding: 82px 0 93px;
 }
 .iedvesmas-stasti .top {
   margin: auto;
